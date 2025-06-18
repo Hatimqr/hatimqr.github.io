@@ -1,0 +1,56 @@
+---
+import Section from "./Section.astro";
+import type { SkillsProps } from "@types";
+
+interface Props {
+  skills: SkillsProps;
+}
+
+const { skills } = Astro.props;
+---
+
+<Section text="Technical Capabilities" href="skills">
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {
+      Object.entries(skills).map(([category, skillList]) => (
+        <div class="rounded-lg border border-neutral/20 bg-black/50 p-6">
+          <h3 class="mb-4 font-serif text-xl font-semibold text-primary">
+            {category}
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            {skillList.map((skill) => (
+              <span class="inline-block rounded-full bg-neutral/10 px-3 py-1.5 text-sm font-medium text-white hover:bg-primary/20 hover:text-primary transition-colors duration-200">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  
+  <!-- Languages Section -->
+  <div class="mt-8 rounded-lg border border-neutral/20 bg-black/50 p-6">
+    <h3 class="mb-4 font-serif text-xl font-semibold text-primary">
+      Languages
+    </h3>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="text-center">
+        <div class="mb-2 text-2xl font-bold text-white">Native</div>
+        <div class="text-sm text-neutral">English, Gujarati, Sinhalese</div>
+      </div>
+      <div class="text-center">
+        <div class="mb-2 text-2xl font-bold text-white">Conversational</div>
+        <div class="text-sm text-neutral">Hindi, Urdu</div>
+      </div>
+      <div class="text-center">
+        <div class="mb-2 text-2xl font-bold text-white">Basic</div>
+        <div class="text-sm text-neutral">French</div>
+      </div>
+      <div class="text-center">
+        <div class="mb-2 text-2xl font-bold text-primary">6</div>
+        <div class="text-sm text-neutral">Total Languages</div>
+      </div>
+    </div>
+  </div>
+</Section>
