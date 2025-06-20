@@ -1,10 +1,10 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Hatim Rehmanjee — Data Science & Consulting",
+  title: "Hatim Rehmanjee — Strategic Problem Solver & Aspiring Data-Driven Consultant",
   author: "Hatim Rehmanjee",
   description:
-    "Final year Computer Science student at NYU Abu Dhabi with expertise in data science, quantitative finance, and business analytics. Seeking opportunities in consulting and data science roles.",
+    "Final year Computer Science student at NYU Abu Dhabi combining analytical rigor with business strategy. Proven track record of delivering data-driven insights to drive business growth across emerging markets, with experience at PwC, KPMG, and leading regional firms.",
   lang: "en",
   siteLogo: "/hatim-small.jpeg",
   navLinks: [
