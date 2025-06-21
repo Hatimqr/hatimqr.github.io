@@ -8,13 +8,14 @@ export const SITE_CONFIG: SiteConfig = {
   lang: "en",
   siteLogo: "/hatim-small.jpeg",
   navLinks: [
-    { text: "Experience", href: "#experience" },
-    { text: "Research", href: "#research" },
-    { text: "Education", href: "#education" },
-    { text: "Skills", href: "#skills" },
-    { text: "Leadership", href: "#leadership" },
-    { text: "Projects", href: "#projects" },
     { text: "About", href: "#about" },
+    { text: "Education", href: "#education" },
+    { text: "Experience", href: "#experience" },
+    { text: "Projects", href: "#projects" },
+    { text: "Skills", href: "#skills" },
+    { text: "Research", href: "#research" },
+    { text: "Leadership", href: "#leadership" },
+
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://linkedin.com/in/hatim-rehmanjee" },
