@@ -9,6 +9,17 @@
   --color-white: #e2e8f0;
   --color-black: #0e141b;
 
+  /* Content width variables */
+  --content-width-hero: 48rem;  /* 768px - 3xl */
+  --content-width-section: 64rem;  /* 1024px - 4xl */
+  
+  /* Section-specific font sizes */
+  --section-heading: var(--text-3xl);
+  --section-subheading: var(--text-xl);
+  --section-text: var(--text-sl);
+  --section-detail: var(--text-sm);
+
+  /* Base text sizes */
   --text-xs: 0.875rem;
   --text-xs--line-height: 1.125rem;
   --text-sm: 1rem;

@@ -33,18 +33,11 @@ const { projects } = Astro.props;
                 >
                   Source
                 </a>
-                <a
-                  href={linkPreview}
-                  target="_blank"
-                  class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
-                >
-                  Preview
-                </a>
               </div>
             </div>
             <div class="flex items-end justify-end overflow-hidden">
               <Image
-                class="h-full w-[95%] rounded-ss-xl rounded-ee-2xl object-none object-left-top sm:h-[85%] sm:w-full"
+                class="h-full w-[95%] rounded-ss-xl rounded-ee-2xl object-cover object-left-top sm:h-[85%] sm:w-full"
                 src={image}
                 alt={name}
                 width="736"
