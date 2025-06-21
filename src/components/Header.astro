@@ -81,36 +81,68 @@ const { siteLogo, navLinks } = Astro.props;
     });
   });
 
-  // Update navigation based on scroll position with Intersection Observer
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("href") === `#${entry.target.id}`) {
-              item.classList.add("text-white", "md:after:opacity-100");
-            } else {
-              item.classList.remove("text-white", "md:after:opacity-100");
-            }
-          });
-        }
+  // Improved navigation highlighting based on scroll position
+  const sections = Array.from(document.querySelectorAll("section[id]"));
+  
+  const updateActiveNavigation = () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    let currentSection = '';
+    
+    // Check which section is currently most visible
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const sectionTop = scrollY + rect.top;
+      const sectionHeight = rect.height;
+      
+      // Consider a section active if:
+      // 1. The top of the section is within the top 40% of the viewport, OR
+      // 2. The section takes up more than 30% of the viewport
+      if (
+        (rect.top <= windowHeight * 0.4 && rect.bottom > 0) ||
+        (rect.top < windowHeight * 0.7 && rect.bottom > windowHeight * 0.3)
+      ) {
+        currentSection = section.id;
+      }
+    });
+    
+    // Update navigation items
+    navItems.forEach((item) => {
+      const href = item.getAttribute("href");
+      if (href === `#${currentSection}`) {
+        item.classList.add("text-white", "md:after:opacity-100");
+      } else {
+        item.classList.remove("text-white", "md:after:opacity-100");
+      }
+    });
+  };
+
+  // Use scroll event with throttling for better performance
+  let ticking = false;
+  const handleScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateActiveNavigation();
+        ticking = false;
       });
-    },
-    { threshold: 0.5 },
-  );
+      ticking = true;
+    }
+  };
 
-  document.querySelectorAll("section").forEach((section) => {
-    observer.observe(section);
-  });
+  // Initial call and event listeners
+  updateActiveNavigation();
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", updateActiveNavigation);
 
-  // Cleanup observer
+  // Cleanup
   document.onvisibilitychange = () => {
     if (document.visibilityState === "hidden") {
-      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateActiveNavigation);
     } else {
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
-      });
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("resize", updateActiveNavigation);
     }
   };
 </script>
