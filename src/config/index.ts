@@ -3,7 +3,7 @@ import type { SiteConfig, SiteContent } from "../types";
 
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Hatim Rehmanjee — Strategic Problem Solver & Aspiring Data-Driven Consultant",
+  title: "Hatim Rehmanjee",
   author: "Hatim Rehmanjee",
   description:
     "Final year Computer Science student at NYU Abu Dhabi combining analytical rigor with business strategy. Proven track record of delivering data-driven insights to drive business growth across emerging markets, with experience at PwC, KPMG, and leading regional firms.",
@@ -31,7 +31,7 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Hatim Rehmanjee",
-    specialty: "Data Scientist & Problem Solver",
+    specialty: "A Data-Driven Problem Solver",
     summary: "Final year CS student at NYU Abu Dhabi who loves turning messy data into clear insights. I've had the chance to work with amazing teams at PwC, KPMG, and across emerging markets—always looking for that moment when the numbers start telling a story.",
     email: "hqr9411@nyu.edu"
   },

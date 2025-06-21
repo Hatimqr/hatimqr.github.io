@@ -6,20 +6,82 @@ import type { AboutProps, HeroProps } from "@types";
 type Props = AboutProps & Pick<HeroProps, "name">;
 
 const { description, image, name } = Astro.props;
+
+// Function to parse and format the description with proper quote styling
+const parseDescription = (text: string) => {
+  const paragraphs = text.split("\n\n").map(p => p.trim()).filter(p => p);
+  return paragraphs;
+};
+
+const formatParagraph = (paragraph: string) => {
+  // Check if paragraph contains a quote (starts and ends with **)
+  const quoteMatch = paragraph.match(/^\*\*(.*?)\*\*(.*)$/);
+  
+  if (quoteMatch) {
+    const [, quote, attribution] = quoteMatch;
+    return {
+      type: 'quote',
+      quote: quote.trim(),
+      attribution: attribution.trim()
+    };
+  }
+  
+  // Handle bold text within paragraphs
+  const formattedText = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>');
+  
+  return {
+    type: 'paragraph',
+    content: formattedText
+  };
+};
+
+const formattedParagraphs = parseDescription(description).map(formatParagraph);
 ---
 
 <Section text="About Me" href="about">
   <div class="flex flex-col items-center gap-12 md:flex-row md:gap-8">
     <div class="w-auto text-base text-neutral md:pr-5">
-      {description.split("\n\n").map((paragraph) => (
-        <p class="mb-4">{paragraph.trim()}</p>
-      ))}
+      {formattedParagraphs.map((item) => {
+        if (item.type === 'quote') {
+          return (
+            <blockquote class="relative mb-8 rounded-2xl border-l-4 border-primary bg-gradient-to-r from-primary/5 to-transparent p-6 md:p-8">
+              {/* Quote icon */}
+              <svg 
+                class="absolute -top-2 -left-2 h-8 w-8 text-primary/30" 
+                fill="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+              </svg>
+              
+              {/* Quote text */}
+              <p class="mb-4 font-serif text-lg leading-relaxed text-white md:text-lg italic relative z-10">
+                "{item.quote}"
+              </p>
+              
+              {/* Attribution */}
+              {item.attribution && (
+                <cite class="block text-sm text-primary/80 font-medium not-italic">
+                  {item.attribution}
+                </cite>
+              )}
+              
+              {/* Decorative gradient overlay */}
+              <div class="quote-overlay absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/[0.02] via-transparent to-primary/[0.01] pointer-events-none"></div>
+            </blockquote>
+          );
+        } else {
+          return (
+            <p class="mb-4 leading-relaxed" set:html={item.content}></p>
+          );
+        }
+      })}
     </div>
     <div
-      class="h-80 w-64 flex-shrink-0 rotate-[5deg] bg-white p-4 md:rotate-[7deg]"
+      class="h-80 w-64 flex-shrink-0 rotate-[5deg] bg-white p-4 md:rotate-[7deg] shadow-2xl"
     >
       <Image
-        class="object-cover"
+        class="h-full w-full object-cover rounded-sm"
         src={image}
         width="260"
         height="280"
@@ -28,3 +90,33 @@ const { description, image, name } = Astro.props;
     </div>
   </div>
 </Section>
+
+<style>
+  /* Additional styles for quote animation */
+  blockquote {
+    animation: fadeInUp 0.6s ease-out;
+    transform-origin: center bottom;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effect for the quote */
+  blockquote:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+  }
+  
+  blockquote:hover .quote-overlay {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), transparent, rgba(37, 99, 235, 0.02));
+    transition: background 0.3s ease;
+  }
+</style>
