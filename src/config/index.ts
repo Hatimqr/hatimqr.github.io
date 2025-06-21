@@ -1,5 +1,7 @@
 import type { SiteConfig, SiteContent } from "../types";
 
+
+
 export const SITE_CONFIG: SiteConfig = {
   title: "Hatim Rehmanjee — Strategic Problem Solver & Aspiring Data-Driven Consultant",
   author: "Hatim Rehmanjee",
@@ -18,8 +20,8 @@ export const SITE_CONFIG: SiteConfig = {
 
   ],
   socialLinks: [
-    { text: "LinkedIn", href: "https://linkedin.com/in/hatim-rehmanjee" },
-    { text: "GitHub", href: "https://github.com/hatimrehmanjee" },
+    { text: "LinkedIn", href: "https://linkedin.com/in/hatimrehmanjee" },
+    { text: "GitHub", href: "https://github.com/hatimqr" },
     { text: "Email", href: "mailto:hqr9411@nyu.edu" },
   ],
   socialImage: "/hatim-og.png",
@@ -29,8 +31,8 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Hatim Rehmanjee",
-    specialty: "Strategic Problem Solver & Aspiring Consultant",
-    summary: "Transforming complex challenges into actionable insights. Final year CS student at NYU Abu Dhabi with proven experience at PwC and KPMG, where data-driven analysis meets strategic thinking. Built for the impossible standards that others avoid.",
+    specialty: "Data Scientist & Problem Solver",
+    summary: "Final year CS student at NYU Abu Dhabi who loves turning messy data into clear insights. I've had the chance to work with amazing teams at PwC, KPMG, and across emerging markets—always looking for that moment when the numbers start telling a story.",
     email: "hqr9411@nyu.edu"
   },
   experience: [
@@ -270,13 +272,15 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      The moments that define us happen when everything else falls away. I have always chosen to build up rather than break down, achieving the best results in my batch and learning that adversity doesn't have to diminish performance—it can fuel it.\n
-  
-      That resilience, first discovered through rowing's grueling training sessions, has shaped everything since. From walking into KPMG with no finance background to mastering computer science from zero programming experience, I've built my career on embracing the unknown and setting standards others consider impossible.\n
-  
-      My journey spans three continents and diverse challenges: analyzing terrabytes of stock exchange data, developing customer clustering strategies for Sri Lanka's largest conglomerate, and creating algorithmic trading systems that outperform market benchmarks. What connects these experiences is a systematic approach to complex problems and an obsession with translating analysis into action.\n
-  
-      I'm passionate about the moment when data becomes decision, when complexity becomes clarity, and when rigorous analysis shapes strategic direction.
+      There's something magical about the moment when chaos becomes clarity—when you're staring at a spreadsheet that makes no sense, and suddenly the pattern emerges. That's what I live for.\n
+
+      **"You're only given a little spark of madness. You mustn't lose it."** This Robin Williams quote has become my north star. Whether I was learning to row (badly, at first), diving into finance with zero background at KPMG, or wrestling with my first lines of code, I've learned that a bit of creative madness often leads to the best solutions.\n
+
+      My journey has taken me from the rowing docks of Sri Lanka to the lecture halls of NYU Abu Dhabi, with stops at Big Four consulting firms and deep dives into everything from algorithmic trading to customer analytics. Along the way, I've discovered that the best insights come not from playing it safe, but from asking the questions others might avoid.\n
+
+      Whether I'm analyzing terabytes of stock market data or figuring out why customers behave the way they do, I approach each challenge with curiosity and a healthy dose of that essential madness. Because sometimes the unconventional path is exactly what leads to breakthrough moments.\n
+
+      When I'm not buried in data, you'll probably find me exploring a new city (thanks to NYU's global network), debating the latest F1 strategy, or planning the next impossible project that everyone says can't be done.
     `,
     image: "/hatim-big.jpeg",
   },
