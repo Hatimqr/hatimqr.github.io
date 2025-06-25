@@ -14,10 +14,9 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Education", href: "#education" },
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
-    { text: "Skills", href: "#skills" },
     { text: "Research", href: "#research" },
     { text: "Leadership", href: "#leadership" },
-
+    { text: "Skills", href: "#skills" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://linkedin.com/in/hatimrehmanjee" },
