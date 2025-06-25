@@ -278,8 +278,6 @@ export const SITE_CONTENT: SiteContent = {
 
       My journey has taken me from a small boathouse in Sri Lanka to the classrooms of NYU Abu Dhabi, with stops at Big Four consulting firms, an obsession with algorithmic trading, and an unexpected draw to customer analytics. Along the way, I've learned to really value that spark of madness because thats the thing that makes me different and gives me the courage to go the extra mile.\n
 
-      Whether I'm trying to make heads or tails of terabytes of stock market data, or trying to figure out whether that singular $200 purchase from a new churning customer in a supermarket is a joining blunder, I approach each challenge with curiosity and a healthy dose of that essential madness. Those moments of utter confusion are what I live for.\n
-
       When I'm not buried in data, you'll probably find me looking for cheap flights (to any new place really), trying to convince some unfortunate soul that Ferrari's F1 strategy is actually good (I know I'm wrong), or brainstorming some business idea that probably won't work out.
     `,
     image: "/hatim.jpg",
