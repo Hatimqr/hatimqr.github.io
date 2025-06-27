@@ -21,7 +21,7 @@ export const SITE_CONFIG: SiteConfig = {
   socialLinks: [
     { text: "LinkedIn", href: "https://linkedin.com/in/hatimrehmanjee" },
     { text: "GitHub", href: "https://github.com/hatimqr" },
-    { text: "Email", href: "mailto:hqr9411@nyu.edu" },
+    { text: "Email", href: "mailto:hrehmanjee@icloud.com" },
   ],
   socialImage: "/hatim.jpg",
   canonicalURL: "https://hatimrehmanjee.com",
@@ -32,7 +32,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Hatim Rehmanjee",
     specialty: "A Data-Driven Problem Solver",
     summary: "Final year CS student at NYU Abu Dhabi who loves turning messy data into clear insights. I've had the chance to work with amazing teams at PwC, KPMG, and across emerging markets—always looking for that moment when the numbers start telling a story.",
-    email: "hqr9411@nyu.edu"
+    email: "hrehmanjee@icloud.com"
   },
   experience: [
     {
