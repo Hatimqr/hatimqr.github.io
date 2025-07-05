@@ -17,6 +17,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Research", href: "#research" },
     { text: "Leadership", href: "#leadership" },
     { text: "Skills", href: "#skills" },
+    { text: "Travel", href: "#travel" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://linkedin.com/in/hatimrehmanjee" },
@@ -280,5 +281,16 @@ export const SITE_CONTENT: SiteContent = {
       When I'm not buried in data, you'll probably find me looking for cheap flights (to any new place really), trying to convince some unfortunate soul that Ferrari's F1 strategy is actually good (I know I'm wrong), or brainstorming some business idea that probably won't work out.
     `,
     image: "/hatim.jpg",
+  },
+  travel: {
+    description:
+    `
+    I didn't have too many opportunities to travel for fun when I was younger. When I went to university, 3 things happened: 1) I had financial freedom because of my full scholarhsip. 2) I was at a university that put an emphasis on being 'global'. 3) I was located in the UAE, quite literally in the middle of the world. Combined with smart financial decisions and part-time work, I had the freedom to see the world.\n
+
+    These adventures have taught me more than I expected. Growing up in Sri Lanka—a small island fairly cut off from the rest of the world culturally—I notice alot of interesting differences in otherparts of the world. Being in new environments means facing unexpected problems, and figuring out how to solve them has become one of my favorite challenges.
+
+    While it may not mean much professionally, it's something I'm really proud of - especially since I did it all on my own.
+    `,
+    image: "/map.jpeg", 
   },
 };

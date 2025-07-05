@@ -1,0 +1,52 @@
+---
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
+import type { TravelProps } from "@types";
+
+type Props = TravelProps;
+
+const { description, image } = Astro.props;
+
+// Function to parse and format the description with proper styling
+const parseDescription = (text: string) => {
+  const paragraphs = text.split("\n\n").map(p => p.trim()).filter(p => p);
+  return paragraphs;
+};
+
+const formatParagraph = (paragraph: string) => {
+  // Handle bold text within paragraphs
+  const formattedText = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>');
+  return formattedText;
+};
+
+const paragraphs = parseDescription(description);
+---
+
+<Section text="Exploring the World" href="travel">
+  <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+    <!-- Text Content -->
+    <div class="order-2 lg:order-1">
+      {paragraphs.map(paragraph => (
+        <p 
+          class="mb-6 text-base leading-relaxed text-neutral"
+          set:html={formatParagraph(paragraph)}
+        />
+      ))}
+    </div>
+
+    <!-- World Map Image -->
+    <div class="order-1 lg:order-2">
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-transparent p-1">
+        <div class="rounded-xl bg-black/50 p-4">
+          <Image
+            class="w-full rounded-lg"
+            src={image}
+            alt="World map showing countries and cities visited"
+            width="500"
+            height="300"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

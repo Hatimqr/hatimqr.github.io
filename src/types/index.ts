@@ -17,6 +17,7 @@ export interface SiteContent {
   leadership: LeadershipProps[];
   projects: ProjectProps[];
   about: AboutProps;
+  travel: TravelProps;
 }
 
 export interface HeroProps {
@@ -84,4 +85,9 @@ export interface AboutProps {
 export interface HeaderProps {
   siteLogo: string;
   navLinks: { text: string; href: string }[];
+}
+
+export interface TravelProps {
+  description: string;
+  image: string;
 }
