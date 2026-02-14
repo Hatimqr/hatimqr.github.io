@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap'
+import { gsap, useGSAP } from '@/lib/gsap'
 
 export function Origin() {
   const containerRef = useRef<HTMLElement>(null)

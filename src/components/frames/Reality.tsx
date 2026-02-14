@@ -14,14 +14,25 @@ export function Reality() {
         },
       })
 
-      // Gentler animation — less blur, less travel, slower
-      tl.from('[data-animate="paragraph"]', {
-        y: 14,
+      tl.from('[data-animate="headline"]', {
+        y: 20,
         opacity: 0,
-        filter: 'blur(3px)',
-        duration: 0.8,
-        stagger: 0.15,
+        filter: 'blur(4px)',
+        duration: 0.9,
       })
+
+      // Gentler animation — less blur, less travel, slower
+      tl.from(
+        '[data-animate="paragraph"]',
+        {
+          y: 14,
+          opacity: 0,
+          filter: 'blur(3px)',
+          duration: 0.8,
+          stagger: 0.15,
+        },
+        '-=0.3',
+      )
 
       tl.from(
         '[data-animate="clarity"]',
@@ -51,11 +62,14 @@ export function Reality() {
   return (
     <section ref={containerRef} id="reality" className="frame">
       <div className="mx-auto w-full max-w-lg">
-        <div className="space-y-6">
-          <p data-animate="paragraph" className="text-text-secondary">
-            Look, I&rsquo;m not going to pretend I have it all figured out.
-          </p>
+        <h2
+          data-animate="headline"
+          className="font-display text-[clamp(1.5rem,3.5vw,2.25rem)] leading-[1.2] tracking-[-0.02em] text-text-secondary"
+        >
+          Look, I&rsquo;m not going to pretend I have it all figured out.
+        </h2>
 
+        <div className="mt-8 space-y-6 md:mt-10">
           <p data-animate="paragraph" className="text-text-secondary">
             I&rsquo;m still learning. Still making mistakes. Still spending too
             much time debugging things that shouldn&rsquo;t be broken.

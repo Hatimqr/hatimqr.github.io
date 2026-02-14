@@ -8,6 +8,12 @@ export function Hook() {
     () => {
       const tl = gsap.timeline({ delay: 0.3 })
 
+      tl.from('[data-animate="intro"]', {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+      })
+
       tl.from('[data-animate="headline"]', {
         y: 32,
         opacity: 0,
@@ -42,6 +48,15 @@ export function Hook() {
   return (
     <section ref={containerRef} id="hook" className="frame">
       <div className="mx-auto w-full max-w-4xl">
+        <p
+          data-animate="intro"
+          className="mb-6 font-mono text-sm tracking-wide text-text-muted"
+        >
+          Hi, I'm Hatim Rehmanjee. Final year CS student at NYU Abu Dhabi,
+          <br />
+          with minors in economics and mathematics.
+        </p>
+
         <h1
           data-animate="headline"
           className="font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.08] tracking-[-0.03em] text-accent"

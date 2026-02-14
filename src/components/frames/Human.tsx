@@ -1,12 +1,6 @@
 import { useRef } from 'react'
 import { gsap, useGSAP } from '@/lib/gsap'
 
-const stats = [
-  { value: '6', label: 'languages' },
-  { value: '4', label: 'continents studied' },
-  { value: '$500k', label: 'raised for Student Energy Summit' },
-]
-
 export function Human() {
   const containerRef = useRef<HTMLElement>(null)
 
@@ -85,15 +79,14 @@ export function Human() {
         '-=0.2',
       )
 
-      // Staccato facts — rapid fire
+      // Passport block
       tl.from(
-        '[data-animate="stat"]',
+        '[data-animate="passport"]',
         {
-          y: 10,
+          y: 14,
           opacity: 0,
-          filter: 'blur(3px)',
-          duration: 0.4,
-          stagger: 0.07,
+          filter: 'blur(4px)',
+          duration: 0.7,
         },
         '-=0.2',
       )
@@ -147,7 +140,7 @@ export function Human() {
         <p data-animate="bridge" className="mt-8 text-text-secondary md:mt-10">
           The discipline to suffer through a 2km race at maximum heart rate is
           the same discipline I use to debug SQL queries at 3 AM when the only
-          thing broken is a single misplaced comma.
+          thing broken is a single misplaced semicolon.
         </p>
 
         {/* ACCA — second evidence block */}
@@ -178,25 +171,60 @@ export function Human() {
           family&rsquo;s full of accountants&mdash;it would be weird not to.
         </p>
 
-        {/* Staccato facts — tight grid */}
-        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 md:mt-10">
-          {stats.map((s) => (
-            <div key={s.label} data-animate="stat" className="flex items-baseline gap-2">
-              <span className="font-mono text-lg text-text-primary">
-                {s.value}
-              </span>
-              <span className="text-sm text-text-muted">
-                {s.label}
-              </span>
-            </div>
-          ))}
+        {/* Passport block */}
+        <div data-animate="passport" className="mt-8 space-y-5 md:mt-10">
+          <div>
+            <p className="font-mono text-xs tracking-[0.1em] uppercase text-text-muted">
+              Route
+            </p>
+            <p className="mt-1.5 font-mono text-sm text-text-secondary">
+              Colombo <span className="text-text-primary">&rarr;</span> Abu
+              Dhabi <span className="text-text-primary">&rarr;</span> Nairobi{' '}
+              <span className="text-text-primary">&rarr;</span> Paris{' '}
+              <span className="text-text-primary">&rarr;</span> New York{' '}
+              <span className="text-text-primary">&rarr;</span> Buenos Aires{' '}
+              <span className="text-text-muted">(studied)</span>
+            </p>
+            <p className="mt-1 font-mono text-sm text-text-muted">
+              + 23 other countries{' '}
+              <span className="italic">(yeah, I like to travel)</span>
+            </p>
+          </div>
+
+          <div>
+            <p className="font-mono text-xs tracking-[0.1em] uppercase text-text-muted">
+              Languages
+            </p>
+            <p className="mt-1.5 font-mono text-sm text-text-secondary">
+              English, Sinhala{' '}
+              <span className="text-text-muted">(native)</span>{' '}
+              &middot; Gujarati{' '}
+              <span className="text-text-muted">(speak)</span>{' '}
+              &middot; Hindi/Urdu{' '}
+              <span className="text-text-muted">(understand)</span>{' '}
+              &middot; French{' '}
+              <span className="text-text-muted">(5 months in Paris)</span>
+            </p>
+          </div>
+
+          <div>
+            <p className="font-mono text-xs tracking-[0.1em] uppercase text-text-muted">
+              Student Energy Summit 2023
+            </p>
+            <p className="mt-1.5 font-mono text-sm text-text-secondary">
+              50+ countries &middot; $500k raised &middot; Abu Dhabi
+            </p>
+            <p className="mt-0.5 font-mono text-sm text-text-muted">
+              Largest student-led energy conference in the world
+            </p>
+          </div>
         </div>
 
         <p
           data-animate="metaphysics"
-          className="mt-6 text-sm text-text-muted"
+          className="mt-6 text-text-secondary"
         >
-          And I still think metaphysics is underrated.
+          And I think philosophy is really cool too&mdash;especially Buddhism.
         </p>
 
         {/* Dinner party closer */}
@@ -204,7 +232,9 @@ export function Human() {
           data-animate="closer"
           className="mt-10 font-display text-xl italic leading-snug tracking-[-0.01em] text-text-secondary md:mt-12 md:text-2xl"
         >
-          But sure, the rowing thing sounds more impressive at dinner parties.
+          But if I&rsquo;m being honest, the rowing is still the thing
+          I&rsquo;m most proud of. Everything else I can attribute to
+          caffeine.
         </p>
       </div>
     </section>

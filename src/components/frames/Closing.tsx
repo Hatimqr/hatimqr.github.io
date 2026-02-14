@@ -137,11 +137,12 @@ export function Closing() {
               className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3"
             >
               <a
-                href="/cv.pdf"
+                href="/cv"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded border border-accent/50 px-4 py-2 font-mono text-sm text-accent transition-colors duration-300 hover:border-accent hover:bg-accent-subtle"
               >
-                Download CV
-                <span className="text-text-muted">.pdf</span>
+                View CV
               </a>
               <a
                 href="mailto:hrehmanjee@icloud.com"
@@ -150,7 +151,7 @@ export function Closing() {
                 hrehmanjee@icloud.com
               </a>
               <a
-                href="https://linkedin.com/in/hatimqr"
+                href="https://linkedin.com/in/hatimrehmanjee"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-sm text-text-muted transition-colors duration-300 hover:text-text-secondary"

@@ -116,7 +116,7 @@ export function LLM() {
           The goal isn&rsquo;t making models{' '}
           <em className="text-text-muted">sound</em> smart. It&rsquo;s making
           them{' '}
-          <span className="font-display italic text-accent">
+          <span className="font-display italic text-text-primary">
             actually be right
           </span>
           .

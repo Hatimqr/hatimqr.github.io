@@ -84,12 +84,13 @@ export function NerdOne() {
           data-animate="headline"
           className="font-display text-[clamp(1.75rem,4.5vw,3rem)] leading-[1.12] tracking-[-0.02em]"
         >
-          I don&rsquo;t trust GUIs.
+          Nobody has ever ruined a terminal.
         </h2>
 
         <p data-animate="desc" className="mt-8 text-text-secondary md:mt-10">
-          So I built a terminal-based personal finance planner in
-          Python. All from the command line.
+          GUIs get redesigned every few years. Sometimes for the
+          worse (Windows&nbsp;8). So when I needed a
+          personal finance tool, I built a terminal application in Python.
         </p>
 
         {/* Feature list — tight, structured, CLI-flavored */}
@@ -124,10 +125,12 @@ export function NerdOne() {
           data-animate="closing"
           className="mt-8 text-text-secondary md:mt-10"
         >
-          But now my financial data lives in{' '}
-          <span className="font-mono text-[0.9em] text-secondary">SQLite</span>{' '}
-          on my machine, not in some company&rsquo;s cloud getting scraped for
-          ad targeting.
+          The backend is{' '}
+          <span className="font-mono text-[0.9em] text-secondary">Python</span>
+          , so I can plug in any library I want. Next up: investment
+          analytics&mdash;portfolio tracking, return attribution, the works.
+          The end goal is a PS5 racing rig. The finance app is just
+          infrastructure.
         </p>
       </div>
     </section>

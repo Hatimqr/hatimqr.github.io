@@ -3,6 +3,7 @@ import { gsap, useGSAP } from '@/lib/gsap'
 
 const roles = [
   { company: 'KPMG', work: 'M&A feasibility' },
+  { company: 'PwC', work: 'Productivity analysis & AI research' },
   { company: 'OCTAVE', work: 'Supply chain optimization' },
   { company: 'Acuity', work: 'Quantitative trading strategies' },
   { company: 'NYUAD', work: '8TB of German Stock Exchange data' },
@@ -119,8 +120,11 @@ export function Corporate() {
           data-animate="closing"
           className="mt-10 font-display text-xl italic leading-snug tracking-[-0.01em] md:mt-12 md:text-2xl"
         >
-          Whether it&rsquo;s forecasting supermarket demand or building
-          portfolio optimization models, I just want the math to be hard.
+          <span className="text-text-secondary">
+            Whether it&rsquo;s forecasting supermarket demand or building
+            portfolio optimization models,
+          </span>{' '}
+          I just want the math to be hard.
         </p>
       </div>
     </section>
