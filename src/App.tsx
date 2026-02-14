@@ -1,16 +1,29 @@
-import { Frame } from '@/components/Frame'
+import { Hook } from '@/components/frames/Hook'
+import { Origin } from '@/components/frames/Origin'
+import { Pattern } from '@/components/frames/Pattern'
+import { Corporate } from '@/components/frames/Corporate'
+import { NerdOne } from '@/components/frames/NerdOne'
+import { NerdTwo } from '@/components/frames/NerdTwo'
+import { Human } from '@/components/frames/Human'
+import { PackDB } from '@/components/frames/PackDB'
+import { LLM } from '@/components/frames/LLM'
+import { Reality } from '@/components/frames/Reality'
+import { Closing } from '@/components/frames/Closing'
 
 function App() {
   return (
-    <main>
-      <Frame id="hero">
-        <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
-          Placeholder
-        </h1>
-        <p className="mt-4 text-lg text-text-secondary">
-          Foundation is working. Start building frames.
-        </p>
-      </Frame>
+    <main className="grain">
+      <Hook />
+      <Origin />
+      <Pattern />
+      <Corporate />
+      <NerdOne />
+      <NerdTwo />
+      <Human />
+      <PackDB />
+      <LLM />
+      <Reality />
+      <Closing />
     </main>
   )
 }

@@ -89,6 +89,10 @@ National-level rower for Sri Lanka. 2 golds, 1 bronze. Vice-captain of the crew.
 
 The discipline to suffer through a 2km race at maximum heart rate is the same discipline I use to debug SQL queries at 3 AM when the only thing broken is a single misplaced comma.
 
+Oh, and during my gap year I passed the first 9 ACCA exams in 7 months while working full-time at KPMG. Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time.
+
+I'll finish the last 4 eventually. I promise. My whole family's full of accountants—it would be weird not to.
+
 Also: I speak 6 languages. I've studied on 4 continents. I raised $500k for the Student Energy Summit. And I still think metaphysics is underrated.
 
 But sure, the rowing thing sounds more impressive at dinner parties.
