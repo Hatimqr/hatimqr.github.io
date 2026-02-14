@@ -1,3 +1,4 @@
+import { TopBar } from '@/components/TopBar'
 import { Hook } from '@/components/frames/Hook'
 import { Origin } from '@/components/frames/Origin'
 import { Pattern } from '@/components/frames/Pattern'
@@ -13,6 +14,7 @@ import { Closing } from '@/components/frames/Closing'
 function App() {
   return (
     <main className="grain">
+      <TopBar />
       <Hook />
       <Origin />
       <Pattern />
