@@ -52,6 +52,18 @@ export function TopBar() {
       { opacity: 1, duration: 0.5 },
       0.5,
     )
+
+    // Hide header when footer is visible
+    gsap.to(headerRef.current, {
+      opacity: 0,
+      pointerEvents: 'none',
+      duration: 0.3,
+      scrollTrigger: {
+        trigger: '#closing footer',
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+      },
+    })
   })
 
   return (
