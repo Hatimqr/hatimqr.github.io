@@ -2,32 +2,85 @@ import { useRef } from 'react'
 import { gsap, useGSAP } from '@/lib/gsap'
 
 export function TopBar() {
-  const barRef = useRef<HTMLElement>(null)
+  const headerRef = useRef<HTMLElement>(null)
+  const nameRef = useRef<HTMLSpanElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.set(barRef.current, { opacity: 0 })
-
-    gsap.to(barRef.current, {
-      opacity: 1,
-      duration: 0.4,
+    // Entrance animation — name + equation fade in before the headline
+    gsap.from(headerRef.current, {
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.1,
       ease: 'power2.out',
+    })
+
+    // Scroll-driven shrink: large hero → compact bar
+    const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '#origin',
-        start: 'top 90%',
-        toggleActions: 'play none none reverse',
+        trigger: '#hook',
+        start: 'top top',
+        end: '35% top',
+        scrub: 0.3,
       },
     })
+
+    // Name shrinks to match equation
+    tl.to(
+      nameRef.current,
+      { fontSize: '1.1rem', duration: 1 },
+      0,
+    )
+
+    // Padding compresses
+    tl.to(
+      '[data-header-inner]',
+      { paddingTop: '0.625rem', paddingBottom: '0.625rem', duration: 1 },
+      0,
+    )
+
+    // Background solidifies
+    tl.to(
+      '[data-header-bg]',
+      { opacity: 1, duration: 1 },
+      0,
+    )
+
+    // Contact info fades in during second half
+    tl.to(
+      contactRef.current,
+      { opacity: 1, duration: 0.5 },
+      0.5,
+    )
   })
 
   return (
     <nav
-      ref={barRef}
-      className="fixed top-0 left-0 right-0 z-40 border-b border-border/30 bg-bg/70 backdrop-blur-md"
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-40"
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5">
-        <div className="font-mono text-xs leading-relaxed">
-          <span className="text-accent">Hatim Rehmanjee</span>
+      {/* Background layer — starts transparent, solidifies on scroll */}
+      <div
+        data-header-bg
+        className="absolute inset-0 border-b border-border/30 bg-bg/70 backdrop-blur-md"
+        style={{ opacity: 0 }}
+      />
+
+      <div
+        data-header-inner
+        className="relative mx-auto flex max-w-5xl items-center justify-between px-4"
+        style={{ paddingTop: '1.5rem', paddingBottom: '1.5rem' }}
+      >
+        <div className="font-mono leading-relaxed">
+          <span
+            ref={nameRef}
+            className="font-display text-accent"
+            style={{ fontSize: '2rem' }}
+          >
+            Hatim Rehmanjee
+          </span>
           <br />
+          <span data-header-equation style={{ fontSize: '0.75rem' }}>
           <span className="text-text-muted">= </span>
           <span className="text-text-muted">(</span>
           <span className="text-text-secondary">CS</span>
@@ -55,8 +108,14 @@ export function TopBar() {
           <span className="text-text-secondary">LLMs</span>
           <span className="text-text-muted">)</span>
           <span className="text-secondary">@Research</span>
+          </span>
         </div>
-        <div className="flex shrink-0 flex-col items-end gap-1">
+
+        <div
+          ref={contactRef}
+          className="flex shrink-0 flex-col items-end gap-1"
+          style={{ opacity: 0 }}
+        >
           <a
             href="mailto:hrehmanjee@icloud.com"
             className="font-mono text-xs text-text-muted transition-colors duration-300 hover:text-text-secondary"
