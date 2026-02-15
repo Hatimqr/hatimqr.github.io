@@ -55,6 +55,17 @@ export function PackDB() {
         '-=0.2',
       )
 
+      tl.from(
+        '[data-animate="code"]',
+        {
+          y: 16,
+          opacity: 0,
+          filter: 'blur(4px)',
+          duration: 0.7,
+        },
+        '-=0.15',
+      )
+
       // The emotional landing — pause, then two beats
       tl.from(
         '[data-animate="hurts"]',
@@ -146,6 +157,67 @@ export function PackDB() {
               Because exact solutions outlast the heat death of the universe
             </span>
           </p>
+        </div>
+
+        {/* PaQL code block */}
+        <div
+          data-animate="code"
+          className="mt-8 overflow-hidden rounded-lg border border-border bg-[#0a0c10] md:mt-10"
+        >
+          {/* Editor top bar */}
+          <div className="flex items-center bg-surface/50 px-4 py-2.5">
+            <div className="flex gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-[#ff5f57] opacity-50" />
+              <span className="h-2 w-2 rounded-full bg-[#febc2e] opacity-50" />
+              <span className="h-2 w-2 rounded-full bg-[#28c840] opacity-50" />
+            </div>
+            <span className="ml-auto font-mono text-xs text-text-muted">
+              query.sql
+            </span>
+          </div>
+          {/* Code area */}
+          <pre className="overflow-x-auto p-5 font-mono text-sm leading-relaxed">
+            <code>
+              <span className="text-secondary">select</span>
+              <span className="text-text-secondary">{' * '}</span>
+              <span className="text-[#4ade80]">decide</span>
+              <span className="text-text-secondary">{' new_hours('}</span>
+              <span className="text-secondary">INT</span>
+              <span className="text-text-secondary">{')'}</span>
+              {'\n'}
+              <span className="text-secondary">from</span>
+              <span className="text-text-secondary">{' Employees E '}</span>
+              <span className="text-secondary">join</span>
+              <span className="text-text-secondary">{' WeeklyPlan P '}</span>
+              <span className="text-secondary">on</span>
+              <span className="text-text-secondary">{' E.empID = P.empID'}</span>
+              {'\n'}
+              <span className="text-[#4ade80]">such that</span>
+              {'\n'}
+              <span className="text-text-secondary">{'  sum(new_hours) <= '}</span>
+              <span className="text-accent">40</span>
+              <span className="text-text-secondary"> </span>
+              <span className="text-[#4ade80]">per</span>
+              <span className="text-text-secondary">{' P.empID '}</span>
+              <span className="text-secondary">and</span>
+              {'\n'}
+              <span className="text-text-secondary">{'  sum(new_hours) <= '}</span>
+              <span className="text-accent">30</span>
+              <span className="text-text-secondary"> </span>
+              <span className="text-[#4ade80]">when</span>
+              <span className="text-text-secondary">{" E.title = "}</span>
+              <span className="text-accent">{"'Director'"}</span>
+              {'\n'}
+              <span className="text-text-secondary">{'    '}</span>
+              <span className="text-[#4ade80]">per</span>
+              <span className="text-text-secondary">{' P.empID'}</span>
+              {'\n'}
+              <span className="text-[#4ade80]">minimize</span>
+              <span className="text-text-secondary">{' sum(abs(new_hours \u2212 hours) '}</span>
+              <span className="text-[#4ade80]">per</span>
+              <span className="text-text-secondary">{' projectID);'}</span>
+            </code>
+          </pre>
         </div>
 
         {/* The emotional landing */}

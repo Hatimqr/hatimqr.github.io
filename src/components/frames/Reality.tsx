@@ -45,16 +45,6 @@ export function Reality() {
         '-=0.25',
       )
 
-      tl.from(
-        '[data-animate="closing"]',
-        {
-          y: 10,
-          opacity: 0,
-          filter: 'blur(2px)',
-          duration: 0.7,
-        },
-        '-=0.2',
-      )
     },
     { scope: containerRef },
   )
@@ -93,13 +83,6 @@ export function Reality() {
         >
           Just: does this solve a real problem? Does it make someone&rsquo;s
           work better?
-        </p>
-
-        <p
-          data-animate="closing"
-          className="mt-6 text-text-secondary"
-        >
-          If the answer is no, I probably shouldn&rsquo;t be working on it.
         </p>
       </div>
     </section>

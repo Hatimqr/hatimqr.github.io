@@ -55,6 +55,17 @@ export function NerdTwo() {
         },
         '+=0.25',
       )
+
+      tl.from(
+        '[data-animate="viz"]',
+        {
+          y: 16,
+          opacity: 0,
+          filter: 'blur(4px)',
+          duration: 0.7,
+        },
+        '-=0.3',
+      )
     },
     { scope: containerRef },
   )
@@ -100,13 +111,29 @@ export function NerdTwo() {
           does?
         </p>
 
-        {/* The aside — whispered, walking away */}
-        <p
-          data-animate="aside"
-          className="mt-10 pl-5 font-display text-lg italic text-text-muted md:mt-12 md:text-xl"
-        >
-          (It does, but only at specific tracks. See? Told you.)
-        </p>
+        {/* Showcase: aside + visualization as cohesive unit */}
+        <div className="mt-10 md:mt-12">
+          <p
+            data-animate="aside"
+            className="pl-5 font-display text-lg italic text-text-muted md:text-xl"
+          >
+            (It does, but only at specific tracks—like Spain:)
+          </p>
+
+          <div
+            data-animate="viz"
+            className="mt-6 rounded-lg border border-border bg-surface p-4 md:p-5"
+          >
+            <img
+              src="/visualization.png"
+              alt="Spain setup clusters - PCA visualization showing F1 car setup philosophies"
+              className="w-full rounded"
+            />
+            <p className="mt-3 text-center font-mono text-xs tracking-wide uppercase text-text-muted">
+              Setup Philosophy Clusters — Spain Circuit
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )

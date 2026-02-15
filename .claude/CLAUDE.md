@@ -1,7 +1,7 @@
 # Hatim Rehmanjee — Personal Website
 
 ## Project
-Scroll-driven narrative personal website. 12 frames telling a story about someone who loves hard problems.
+Scroll-driven narrative personal website. 11 frames telling a story about someone who loves hard problems.
 
 ## Stack
 - React + TypeScript + Vite
@@ -43,7 +43,7 @@ Secondary — Muted Steel (technical terms, code, data):
 ```
 
 ### Typography
-- Display: **Instrument Serif** (headlines, bold statements). Tight tracking (-0.02em), line-height 1.1
+- Display: **Crimson Pro** (headlines, bold statements). Tight tracking (-0.02em), line-height 1.1
 - Body: **DM Sans** (narrative text). 18-20px, line-height 1.65
 - Mono: **JetBrains Mono** (inline code, technical terms). Colored with --secondary
 

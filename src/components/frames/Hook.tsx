@@ -8,7 +8,13 @@ export function Hook() {
     () => {
       const tl = gsap.timeline({ delay: 0.5 })
 
-      tl.from('[data-animate="headline"]', {
+      tl.from('[data-animate="headshot"]', {
+        y: 16,
+        opacity: 0,
+        filter: 'blur(4px)',
+        duration: 0.7,
+        ease: 'power3.out',
+      }).from('[data-animate="headline"]', {
         y: 32,
         opacity: 0,
         filter: 'blur(8px)',
@@ -42,6 +48,13 @@ export function Hook() {
   return (
     <section ref={containerRef} id="hook" className="frame">
       <div className="mx-auto w-full max-w-4xl">
+        <img
+          data-animate="headshot"
+          src="/me.jpg"
+          alt="Hatim Rehmanjee"
+          className="mb-8 h-20 w-20 rounded-full border border-border object-cover md:mb-10"
+        />
+
         <h1
           data-animate="headline"
           className="font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.08] tracking-[-0.03em] text-accent"

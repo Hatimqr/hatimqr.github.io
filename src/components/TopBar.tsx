@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { gsap, useGSAP } from '@/lib/gsap'
+import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap'
 
 export function TopBar() {
   const headerRef = useRef<HTMLElement>(null)
@@ -53,16 +53,12 @@ export function TopBar() {
       0.5,
     )
 
-    // Hide header when footer is visible
-    gsap.to(headerRef.current, {
-      opacity: 0,
-      pointerEvents: 'none',
-      duration: 0.3,
-      scrollTrigger: {
-        trigger: '#closing footer',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse',
-      },
+    // Hide header when closing section's footer is visible
+    ScrollTrigger.create({
+      trigger: '#closing',
+      start: '70% bottom',
+      onEnter: () => gsap.to(headerRef.current, { yPercent: -100, duration: 0.3, ease: 'power2.in' }),
+      onLeaveBack: () => gsap.to(headerRef.current, { yPercent: 0, duration: 0.3, ease: 'power2.out' }),
     })
   })
 

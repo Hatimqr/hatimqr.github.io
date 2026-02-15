@@ -32,27 +32,37 @@ export function LLM() {
       )
 
       tl.from(
-        '[data-animate="paragraph"]',
+        '[data-animate="desc"]',
         {
           y: 18,
           opacity: 0,
           filter: 'blur(4px)',
           duration: 0.7,
-          stagger: 0.12,
         },
         '-=0.35',
       )
 
-      // The distinction — the sole focus
       tl.from(
-        '[data-animate="distinction"]',
+        '[data-animate="curriculum"]',
         {
-          y: 16,
+          y: 14,
+          opacity: 0,
+          filter: 'blur(3px)',
+          duration: 0.7,
+        },
+        '-=0.2',
+      )
+
+      // The punch — needs room to land
+      tl.from(
+        '[data-animate="punch"]',
+        {
+          y: 14,
           opacity: 0,
           filter: 'blur(5px)',
           duration: 0.8,
         },
-        '+=0.15',
+        '+=0.2',
       )
 
       tl.from(
@@ -60,10 +70,10 @@ export function LLM() {
         {
           y: 10,
           opacity: 0,
-          filter: 'blur(4px)',
+          filter: 'blur(3px)',
           duration: 0.7,
         },
-        '+=0.2',
+        '+=0.15',
       )
     },
     { scope: containerRef },
@@ -72,7 +82,7 @@ export function LLM() {
   return (
     <section ref={containerRef} id="llm" className="frame">
       <div className="mx-auto w-full max-w-2xl">
-        {/* Paired temporal signal — matches Frame 8 */}
+        {/* Paired temporal signal — matches PackDB */}
         <p
           data-animate="label"
           className="font-mono text-xs tracking-[0.15em] uppercase text-text-muted"
@@ -84,40 +94,44 @@ export function LLM() {
           data-animate="headline"
           className="mt-4 font-display text-[clamp(1.75rem,4.5vw,3rem)] leading-[1.12] tracking-[-0.02em]"
         >
-          Reasoning in Large Language Models.
+          I created the hardest class I&rsquo;ve taken at university.
         </h2>
 
-        <div className="mt-8 space-y-5 md:mt-10">
-          <p data-animate="paragraph" className="text-text-secondary">
-            Independent research with Prof. Saurabh Ray investigating
-            reinforcement learning approaches to improve LLM reasoning
-            capabilities.
-          </p>
+        <p
+          data-animate="desc"
+          className="mt-8 text-text-secondary md:mt-10"
+        >
+          A friend and I went to one of our professors and asked to do
+          a directed study on reasoning in LLMs. We proposed the
+          syllabus. We take turns every week presenting the topics to
+          each other, supervised by a professor. We cover:
+        </p>
 
-          <p data-animate="paragraph" className="text-text-secondary">
-            Started with{' '}
-            <span className="font-mono text-[0.9em] text-secondary">
-              RLHF
-            </span>{' '}
-            fundamentals. Now exploring whether these techniques could help with
-            formal theorem proving in{' '}
-            <span className="font-mono text-[0.9em] text-secondary">
-              Lean
-            </span>
-            .
+        {/* Curriculum — single block, all topics */}
+        <div
+          data-animate="curriculum"
+          className="mt-5 rounded-lg border border-border bg-bg-elevated p-5 md:p-6"
+        >
+          <p className="font-mono text-sm leading-relaxed text-text-secondary">
+            Transformer architecture &middot; Mechanistic
+            interpretability &middot; DQNs &middot; Policy
+            gradients &middot; RLHF &middot; DPO &middot; Chain of
+            thought &middot; Tree of thought &middot; DeepSeek
+            R1 &middot; PAL &middot; Lean
           </p>
         </div>
 
-        {/* The distinction — everything above is setup for this */}
+        {/* The punch — isolated, given room */}
         <p
-          data-animate="distinction"
+          data-animate="punch"
           className="mt-10 text-lg text-text-secondary md:mt-12 md:text-xl"
         >
-          The goal isn&rsquo;t making models{' '}
-          <em className="text-text-muted">sound</em> smart. It&rsquo;s making
-          them{' '}
-          <span className="font-display italic text-text-primary">
-            actually be right
+          And honestly? An AI tool helped me build this website.
+          It&rsquo;s the single most useful thing I&rsquo;ve ever
+          worked with. It surprises me. It teaches me. I want to
+          know{' '}
+          <span className="font-display text-[1.1em] italic text-text-primary">
+            how on earth it does what it does
           </span>
           .
         </p>
@@ -126,7 +140,8 @@ export function LLM() {
           data-animate="landing"
           className="mt-6 font-display text-xl italic tracking-[-0.01em] md:text-2xl"
         >
-          There&rsquo;s a difference. A big one.
+          If I&rsquo;m going to use it every day, I should probably
+          understand it.
         </p>
       </div>
     </section>

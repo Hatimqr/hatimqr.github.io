@@ -14,50 +14,26 @@ export function Closing() {
         },
       })
 
-      // CTA — Frame 1-level presence
+      // Gentle — continues Reality's restraint
       tl.from('[data-animate="headline"]', {
-        y: 32,
+        y: 20,
         opacity: 0,
-        filter: 'blur(8px)',
-        duration: 1,
+        filter: 'blur(4px)',
+        duration: 0.9,
       })
 
       tl.from(
         '[data-animate="context"]',
         {
-          y: 18,
+          y: 14,
           opacity: 0,
-          filter: 'blur(4px)',
+          filter: 'blur(3px)',
           duration: 0.7,
         },
-        '-=0.4',
+        '-=0.3',
       )
 
-      tl.from(
-        '[data-animate="condition"]',
-        {
-          y: 20,
-          opacity: 0,
-          filter: 'blur(4px)',
-          duration: 0.7,
-          stagger: 0.15,
-        },
-        '-=0.2',
-      )
-
-      // "Let's talk." — the final copper beat
-      tl.from(
-        '[data-animate="ask"]',
-        {
-          y: 16,
-          opacity: 0,
-          filter: 'blur(6px)',
-          duration: 0.9,
-        },
-        '+=0.2',
-      )
-
-      // Footer info resolves in after the ask
+      // Footer resolves in quietly
       tl.from(
         '[data-animate="footer"]',
         {
@@ -66,50 +42,28 @@ export function Closing() {
           duration: 0.6,
           stagger: 0.06,
         },
-        '-=0.3',
+        '-=0.1',
       )
     },
     { scope: containerRef },
   )
 
   return (
-    <section ref={containerRef} id="closing" className="frame !min-h-0">
-      {/* CTA — full viewport statement */}
+    <section ref={containerRef} id="closing" className="frame">
       <div className="mx-auto w-full max-w-4xl">
-        <h2
+        <p
           data-animate="headline"
-          className="font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.08] tracking-[-0.03em] text-accent"
+          className="font-display text-[clamp(1.75rem,4vw,2.75rem)] italic leading-[1.15] tracking-[-0.02em] text-accent"
         >
-          I want your hardest problems.
-        </h2>
+          That&rsquo;s the story so far.
+        </p>
 
         <p
           data-animate="context"
           className="mt-6 text-text-secondary md:mt-8"
         >
-          I&rsquo;m graduating May 2026.
-        </p>
-
-        <div className="mt-8 space-y-4 md:mt-10">
-          <p data-animate="condition" className="text-text-secondary">
-            If you have a complex dataset, a messy pipeline, or a problem that
-            scares your current team&mdash;
-          </p>
-          <p data-animate="condition" className="text-text-primary/80">
-            If you need someone who can move between business context and
-            technical implementation without getting lost in either&mdash;
-          </p>
-          <p data-animate="condition" className="text-text-primary">
-            If you&rsquo;re working on something where the solution isn&rsquo;t
-            obvious and the stakes actually matter&mdash;
-          </p>
-        </div>
-
-        <p
-          data-animate="ask"
-          className="mt-10 font-display text-[clamp(1.75rem,4vw,3rem)] italic tracking-[-0.02em] text-accent md:mt-14"
-        >
-          Let&rsquo;s talk.
+          I graduate in May 2026. I&rsquo;m looking for the next
+          problem that&rsquo;ll keep me up at night.
         </p>
       </div>
 
@@ -118,12 +72,16 @@ export function Closing() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-16">
           {/* Identity + actions */}
           <div className="shrink-0">
-            <h3
-              data-animate="footer"
-              className="font-display text-2xl tracking-[-0.02em] md:text-3xl"
-            >
-              Hatim Rehmanjee
-            </h3>
+            <div data-animate="footer" className="flex items-center gap-5">
+              <img
+                src="/me.jpg"
+                alt="Hatim Rehmanjee"
+                className="h-[72px] w-[72px] shrink-0 rounded-lg border border-border object-cover"
+              />
+              <h3 className="font-display text-2xl tracking-[-0.02em] md:text-3xl">
+                Hatim Rehmanjee
+              </h3>
+            </div>
             <p
               data-animate="footer"
               className="mt-2 text-sm text-text-secondary"
@@ -176,7 +134,7 @@ export function Closing() {
                 Currently
               </p>
               <p className="mt-1.5 text-text-secondary">
-                Building PackDB and researching LLM reasoning.
+                Building PackDB and studying LLM reasoning.
               </p>
             </div>
             <div data-animate="footer">

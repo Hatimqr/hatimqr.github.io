@@ -44,7 +44,11 @@ I wasn't chasing impressive titles. I was chasing that feeling—building someth
 
 **So I tested the limits.**
 
-M&A feasibility at **KPMG**. Supply chain optimization at **OCTAVE**. Quantitative trading strategies at **Acuity**. Economics research processing 8TB of German Stock Exchange data.
+**KPMG** — M&A feasibility
+**PwC** — Productivity analysis & AI research
+**Acuity** — Quantitative trading strategies
+**OCTAVE** — Supply chain optimization
+**NYUAD** — 8TB of German Stock Exchange data
 
 I learned two things:
 
@@ -57,13 +61,18 @@ Whether it's forecasting supermarket demand or building portfolio optimization m
 
 ## Frame 5: The Nerd Stuff (Part 1)
 
-**I don't trust GUIs.**
+**Nobody has ever ruined a terminal.**
 
-So I built a terminal-based personal finance planner in Python. Double-entry bookkeeping, automated reconciliation, P&L and balance sheet generation—all from the command line.
+GUIs get redesigned every few years. Sometimes for the worse (Windows 8). So when I needed a personal finance tool, I built a terminal application in Python.
+
+--ledger → Double-entry bookkeeping
+--reconcile → Automated reconciliation
+--report → P&L and balance sheet generation
+--local → SQLite on my machine. No cloud.
 
 Overkill? Absolutely.
 
-But now my financial data lives in SQLite on my machine, not in some company's cloud getting scraped for ad targeting.
+The backend is Python, so I can plug in any library I want. Next up: investment analytics—portfolio tracking, return attribution, the works. The end goal is a PS5 racing rig. The finance app is just infrastructure.
 
 ---
 
@@ -85,17 +94,21 @@ Because why just *watch* the race when you can prove whether front wing angle ac
 
 **I do touch grass.**
 
-National-level rower for Sri Lanka. 2 golds, 1 bronze. Vice-captain of the crew.
+National-level rower, Sri Lanka. 2 golds, 1 bronze. Vice-captain of the crew.
 
-The discipline to suffer through a 2km race at maximum heart rate is the same discipline I use to debug SQL queries at 3 AM when the only thing broken is a single misplaced comma.
+The discipline to suffer through a 2km race at maximum heart rate is the same discipline I use to debug SQL queries at 3 AM when the only thing broken is a single misplaced semicolon.
 
-Oh, and during my gap year I passed the first 9 ACCA exams in 7 months while working full-time at KPMG. Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time.
+Gap year, KPMG: Passed the first 9 ACCA exams in 7 months while working full-time. Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time.
 
 I'll finish the last 4 eventually. I promise. My whole family's full of accountants—it would be weird not to.
 
-Also: I speak 6 languages. I've studied on 4 continents. I raised $500k for the Student Energy Summit. And I still think metaphysics is underrated.
+Route: Colombo → Abu Dhabi → Nairobi → Paris → New York → Buenos Aires (studied) + 23 other countries (yeah, I like to travel)
+Languages: English, Sinhala (native) · Gujarati (speak) · Hindi/Urdu (understand) · French (5 months in Paris)
+Student Energy Summit 2023: 50+ countries · $500k raised · Abu Dhabi — Largest student-led energy conference in the world
 
-But sure, the rowing thing sounds more impressive at dinner parties.
+And I think philosophy is really cool too—especially Buddhism.
+
+But if I'm being honest, the rowing is still the thing I'm most proud of. Everything else I can attribute to caffeine.
 
 ---
 
@@ -107,7 +120,9 @@ Right now I'm extending DuckDB to handle package queries—the "give me the best
 
 It's NP-hard, which is computer science speak for "there's no perfect algorithm and you're going to suffer."
 
-We're integrating ILP solvers directly into SQL. Building new syntax based on the PaQL language. Implementing approximate algorithms because exact solutions take longer than the heat death of the universe.
+ILP — Solvers integrated directly into SQL
+PaQL — New query syntax for package semantics
+Approx — Because exact solutions outlast the heat death of the universe
 
 It's open source. It's my capstone. It hurts a little.
 
@@ -145,11 +160,13 @@ If the answer is no, I probably shouldn't be working on it.
 
 ---
 
-## Frame 11: The Call to Action
+## Frame 11: The Closing (CTA + Footer)
 
 **I want your hardest problems.**
 
-I'm graduating May 2026. If you have a complex dataset, a messy pipeline, or a problem that scares your current team—
+I'm graduating May 2026.
+
+If you have a complex dataset, a messy pipeline, or a problem that scares your current team—
 
 If you need someone who can move between business context and technical implementation without getting lost in either—
 
@@ -157,25 +174,17 @@ If you're working on something where the solution isn't obvious and the stakes a
 
 **Let's talk.**
 
----
-
-## Frame 12: The Footer
+--- Footer ---
 
 **Hatim Rehmanjee**
 
-CS @ NYU Abu Dhabi | 3.95 GPA | 100% Scholarship  
-Abu Dhabi, UAE
+CS @ NYU Abu Dhabi | 3.95 GPA | 100% Scholarship
 
-**[Download CV (PDF)]**  
-**[hrehmanjee@icloud.com]**  
-**[LinkedIn]**  
-**[GitHub]**
+**[View CV]** · **[hrehmanjee@icloud.com]** · **[LinkedIn]** · **[GitHub]**
 
-Currently building PackDB and researching LLM reasoning.  
+Currently: Building PackDB and researching LLM reasoning.
 Previously: OCTAVE, Acuity, KPMG, PwC.
-
-Native: English, Gujarati, Sinhala  
-Conversational: Hindi, Urdu, French
+Languages: English, Gujarati, Sinhala · Hindi, Urdu, French
 
 ---
 
@@ -204,8 +213,7 @@ Conversational: Hindi, Urdu, French
 6. Humanize (rowing, languages, studying globally)
 7. Show current work (PackDB, LLM research)
 8. Reality check (still learning, but competent)
-9. Strong CTA (I want your hardest problems)
-10. Clean footer with contact
+9. Strong CTA + clean footer with contact (combined in one frame)
 
 **Tone calibration:**
 - Confident but not arrogant

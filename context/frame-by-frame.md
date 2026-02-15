@@ -7,7 +7,7 @@
 The kind where the obvious approach breaks, the solution is hidden, and most reasonable people would just close the laptop."
 
 **Type:** Statement Frame
-**Design:** Wide max-width (max-w-4xl). Headline in Instrument Serif, copper accent. Subtext in DM Sans, secondary gray. Maximum negative space. Scroll cue at bottom.
+**Design:** Wide max-width (max-w-4xl). Headline in Crimson Pro, copper accent. Subtext in DM Sans, secondary gray. Maximum negative space. Scroll cue at bottom.
 **Animation:** Page-load timeline (0.3s delay). Headline focus-pulls from blur(8px) + y:32 over 1.0s. Subtext follows at -0.5s offset. Scroll cue fades last.
 
 ---
@@ -21,7 +21,7 @@ Automated it in a weekend. Not because I was good yet—because I couldn't stand
 That's when I realized: the best problems aren't the cleverest ones. They're the ones that save someone an hour of their life."
 
 **Type:** Narrative Frame
-**Design:** Narrower max-width (max-w-2xl) — viewport closes in for intimacy. Headline in Instrument Serif, warm white (NOT copper — signals shift from statement to story). Thin 64px rule draws in at top to mark the transition. Closing realization in italic Instrument Serif with copper-tinted left border — the emotional punchline, visually distinct from narration.
+**Design:** Narrower max-width (max-w-2xl) — viewport closes in for intimacy. Headline in Crimson Pro, warm white (NOT copper — signals shift from statement to story). Thin 64px rule draws in at top to mark the transition. Closing realization in italic Crimson Pro with copper-tinted left border — the emotional punchline, visually distinct from narration.
 **Animation:** ScrollTrigger at top 70%. Headline → paragraphs (stagger 0.12s) → closing quote → rule scaleX draws left-to-right.
 
 ---
@@ -41,37 +41,45 @@ I wasn't chasing impressive titles. I was chasing that feeling—building someth
 
 ---
 
-## Frame 4: The Corporate Tour
+## Frame 4: The Corporate Tour — BUILT
 
 **Content:**
 "So I tested the limits.
-M&A feasibility at KPMG. Supply chain optimization at OCTAVE. Quantitative trading strategies at Acuity. Economics research processing 8TB of German Stock Exchange data.
+KPMG — M&A feasibility
+PwC — Productivity analysis & AI research
+Acuity — Quantitative trading strategies
+OCTAVE — Supply chain optimization
+NYUAD — 8TB of German Stock Exchange data
 I learned two things:
 1. I really hate the word 'synergy.'
 2. It's not the industry—it's the complexity of the data.
 Whether it's forecasting supermarket demand or building portfolio optimization models, I just want the math to be hard."
 
 **Type:** Evidence Frame
-**Design:** The companies are NOT styled to look impressive — they're listed flat, monospace, matter-of-fact. Like evidence in an argument, not a brag sheet. The indifference to making them look corporate IS the subversion. The numbered list carries the dry humor — "synergy" could be in mono/secondary to feel like a dirty word being quarantined. Closing line is the thesis: "I just want the math to be hard" gets slight emphasis (primary white, or italic serif) as a callback to the "problems that hurt" thread.
+**Design:** Companies listed as a flat grid — monospace company name, dotted separator line, work description. Matter-of-fact, not a brag sheet. The indifference to making them look corporate IS the subversion. "synergy" in mono/secondary — quarantined. Closing thesis in italic Crimson Pro with secondary-colored lead-in, primary white for "I just want the math to be hard."
 **Animation:** ScrollTrigger. Headline → company items stagger in quickly (0.1s, rapid accumulation — he moved fast through these) → numbered list with a beat → closing.
 
 ---
 
-## Frame 5: The Nerd Stuff (Part 1)
+## Frame 5: The Nerd Stuff (Part 1) — BUILT
 
 **Content:**
-"I don't trust GUIs.
-So I built a terminal-based personal finance planner in Python. Double-entry bookkeeping, automated reconciliation, P&L and balance sheet generation—all from the command line.
+"Nobody has ever ruined a terminal.
+GUIs get redesigned every few years. Sometimes for the worse (Windows 8). So when I needed a personal finance tool, I built a terminal application in Python.
+--ledger: Double-entry bookkeeping
+--reconcile: Automated reconciliation
+--report: P&L and balance sheet generation
+--local: SQLite on my machine. No cloud.
 Overkill? Absolutely.
-But now my financial data lives in SQLite on my machine, not in some company's cloud getting scraped for ad targeting."
+The backend is Python, so I can plug in any library I want. Next up: investment analytics—portfolio tracking, return attribution, the works. The end goal is a PS5 racing rig. The finance app is just infrastructure."
 
 **Type:** Showcase Frame
-**Design:** The obsessiveness comes through in layout structure, not decorative terminal aesthetics. No green-on-black cliches. Instead: tighter spacing, denser text, a slightly more compact layout that mirrors CLI efficiency. The feature list (double-entry, reconciliation, P&L, balance sheet) could be rendered as tight, monospace-labeled items — structured like a --help output without literally being one. "Overkill? Absolutely." MUST have breathing room — it's a standalone beat, a shrug. Isolate it with generous margin. Let the silence around it do the work.
-**Animation:** ScrollTrigger. Headline → description → feature items stagger → "Overkill?" beat (with slight extra delay) → closing justification.
+**Design:** Features rendered as CLI flags (--flag → description) inside a bordered, elevated card — structured like --help output. No green-on-black cliches. "Overkill? Absolutely." MUST have breathing room — it's a standalone beat, a shrug. Isolate it with generous margin (mt-12/mt-16). Let the silence around it do the work. Closing reveals the real motivation: PS5 racing rig.
+**Animation:** ScrollTrigger. Headline → description → feature items stagger (0.08s, tight) → "Overkill?" beat (with slight extra delay) → closing.
 
 ---
 
-## Frame 6: The Nerd Stuff (Part 2)
+## Frame 6: The Nerd Stuff (Part 2) — BUILT
 
 **Content:**
 "I also over-analyze my hobbies.
@@ -86,46 +94,50 @@ Because why just watch the race when you can prove whether front wing angle actu
 
 ---
 
-## Frame 7: The Human Element
+## Frame 7: The Human Element — BUILT
 
 **Content:**
 "I do touch grass.
-National-level rower for Sri Lanka. 2 golds, 1 bronze. Vice-captain of the crew.
-The discipline to suffer through a 2km race at maximum heart rate is the same discipline I use to debug SQL queries at 3 AM when the only thing broken is a single misplaced comma.
-Oh, and during my gap year I passed the first 9 ACCA exams in 7 months while working full-time at KPMG. Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time.
+National-level rower, Sri Lanka. 2 golds, 1 bronze. Vice-captain of the crew.
+The discipline to suffer through a 2km race at maximum heart rate is the same discipline I use to debug SQL queries at 3 AM when the only thing broken is a single misplaced semicolon.
+Gap year, KPMG: Passed the first 9 ACCA exams in 7 months while working full-time.
+Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time.
 I'll finish the last 4 eventually. I promise. My whole family's full of accountants—it would be weird not to.
-Also: I speak 6 languages. I've studied on 4 continents. I raised $500k for the Student Energy Summit. And I still think metaphysics is underrated.
-But sure, the rowing thing sounds more impressive at dinner parties."
+Route: Colombo → Abu Dhabi → Nairobi → Paris → New York → Buenos Aires (studied) + 23 other countries
+Languages: English, Sinhala (native) · Gujarati (speak) · Hindi/Urdu (understand) · French (5 months in Paris)
+Student Energy Summit 2023: 50+ countries · $500k raised · Abu Dhabi
+And I think philosophy is really cool too—especially Buddhism.
+But if I'm being honest, the rowing is still the thing I'm most proud of. Everything else I can attribute to caffeine."
 
 **Type:** Evidence Frame (staccato variant)
-**Design:** The shift from technical frames should be in DENSITY, not energy. No sports-portfolio aesthetic. Instead: short facts, compact lines, data points. Present human facts with the same precision as technical ones — "2 golds, 1 bronze." "6 languages." "4 continents." "$500k." These could be rendered as tight inline items or a compact fact grid. Same voice, same person, just different data. The connecting paragraph (rowing discipline = debugging discipline) bridges the two worlds.
-
-The ACCA story is a second evidence block after the bridge paragraph — same left-border treatment as rowing. Monospace label: "Gap year, KPMG". The 9-exams-in-7-months fact is the data. "Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time." rendered as a muted aside — same treatment as Frame 6's parenthetical "(It does, but only at specific tracks. See? Told you.)". The family line ("whole family's full of accountants—it would be weird not to") gets its own beat with slightly warmer treatment — it's the only family mention since Frame 2's dad's spreadsheet. That echo matters.
-
-Closing dinner-party line does all the tonal lifting — give it italic serif treatment.
-**Animation:** ScrollTrigger. Headline → rowing facts (quick) → bridging paragraph → ACCA block → "seemed fine" aside (with delay) → family line → staccato human facts (rapid stagger) → dinner party closer.
+**Design:** Rowing and ACCA as left-bordered evidence blocks with monospace labels. Bridge paragraph connects physical and technical discipline. Passport section uses monospace metadata layout (Route, Languages, Summit as labeled blocks). "Seemed fine at the time." rendered as a muted italic aside. Family line gets its own beat — echoes Frame 2's dad. Buddhism line as plain secondary text. Closing in italic Crimson Pro, secondary color — caffeine quip replaces the dinner party line.
+**Animation:** ScrollTrigger. Headline → rowing block → bridge → ACCA block → "seemed fine" aside (delay for comedic timing) → family line → passport block → metaphysics → rowing closer (final beat).
 
 ---
 
-## Frame 8: The Current Headache (Part 1)
+## Frame 8: The Current Headache (Part 1) — BUILT
 
 **Content:**
-"PackDB: Making databases solve impossible problems.
+"Current work
+PackDB: Making databases solve impossible problems.
 Right now I'm extending DuckDB to handle package queries—the 'give me the best combination of X items that satisfy these constraints' problem.
 It's NP-hard, which is computer science speak for 'there's no perfect algorithm and you're going to suffer.'
-We're integrating ILP solvers directly into SQL. Building new syntax based on the PaQL language. Implementing approximate algorithms because exact solutions take longer than the heat death of the universe.
+ILP — Solvers integrated directly into SQL
+PaQL — New query syntax for package semantics
+Approx — Because exact solutions outlast the heat death of the universe
+[PaQL code block with syntax highlighting]
 It's open source. It's my capstone. It hurts a little.
 I love it."
 
 **Type:** Showcase Frame (active project)
-**Design:** This is the most important technical frame — it's CURRENT, not retrospective. Needs a subtle temporal signal: a small "current" label or indicator in monospace/muted text to distinguish from past work. The content has natural escalation: NP-hard → suffer → heat death → "hurts a little" → "I love it." Those last two lines MUST be isolated. "It hurts a little." as a line, then "I love it." standalone — italic serif, the emotional mirror of Frame 2's closing realization. The arc connects: dad's spreadsheet awakening → "I love building hard things." Technical terms (ILP, PaQL, DuckDB) in secondary/mono treatment.
-**Animation:** ScrollTrigger. Project label/headline → description builds → technical details stagger → pause → "It hurts a little." → "I love it." enters last with its own beat.
+**Design:** "Current work" monospace label at top as temporal signal. Technical details as compact grid (monospace label → description). PaQL code block in a faux-editor with traffic-light dots and "query.sql" tab — syntax highlighted with secondary blue for keywords, green for PaQL-specific keywords, copper for values. "It hurts a little." in plain secondary text, then "I love it." standalone in italic Crimson Pro, copper accent — the emotional peak.
+**Animation:** ScrollTrigger. Label → headline → description paragraphs → technical details stagger (0.08s) → code block → pause → "It hurts a little." → "I love it." enters last with its own beat.
 
-**Paired with Frame 9:** These two frames share a visual language as a "current work" unit. Consider a subtle shared indicator (e.g., both have the "current" label, matching layout structure).
+**Paired with Frame 9:** Both share "Current work" monospace label and matching layout structure.
 
 ---
 
-## Frame 9: The Current Headache (Part 2)
+## Frame 9: The Current Headache (Part 2) — BUILT
 
 **Content:**
 "Reasoning in Large Language Models.
@@ -140,7 +152,7 @@ There's a difference. A big one."
 
 ---
 
-## Frame 10: The Reality Check
+## Frame 10: The Reality Check — BUILT
 
 **Content:**
 "Look, I'm not going to pretend I have it all figured out.
@@ -156,48 +168,33 @@ If the answer is no, I probably shouldn't be working on it."
 
 ---
 
-## Frame 11: The Call to Action
+## Frame 11: The Closing (CTA + Footer) — BUILT
 
-**Content:**
+**Content (CTA):**
 "I want your hardest problems.
-I'm graduating May 2026. If you have a complex dataset, a messy pipeline, or a problem that scares your current team—
+I'm graduating May 2026.
+If you have a complex dataset, a messy pipeline, or a problem that scares your current team—
 If you need someone who can move between business context and technical implementation without getting lost in either—
 If you're working on something where the solution isn't obvious and the stakes actually matter—
 Let's talk."
 
-**Type:** Statement Frame (bookend to Frame 1)
-**Design:** Swings back to wide max-width, big serif headline, copper accent — the same visual scale as Frame 1. This creates a deliberate bookend: the site opens with "I'm drawn to problems that hurt" and closes with "I want your hardest problems." Same energy, same confidence. The three "If you..." lines build visually — staggered entrance with increasing presence (opacity, or slight size/weight progression). "Let's talk." is the final copper moment — isolated, definitive. Below it, minimal contact actions (email as primary).
-**Animation:** ScrollTrigger. Headline enters with Frame 1-level presence → "If you..." lines stagger with escalating timing → "Let's talk." enters last with a beat.
-
----
-
-## Frame 12: The Footer
-
-**Content:**
-Hatim Rehmanjee
+**Content (Footer):**
+Hatim Rehmanjee (with photo placeholder)
 CS @ NYU Abu Dhabi | 3.95 GPA | 100% Scholarship
-Abu Dhabi, UAE
-
-[Download CV (PDF)]
-[hrehmanjee@icloud.com]
-[LinkedIn]
-[GitHub]
-
-Currently building PackDB and researching LLM reasoning.
+[View CV] · [hrehmanjee@icloud.com] · [LinkedIn] · [GitHub]
+Currently: Building PackDB and researching LLM reasoning.
 Previously: OCTAVE, Acuity, KPMG, PwC.
+Languages: English, Gujarati, Sinhala · Hindi, Urdu, French
 
-Native: English, Gujarati, Sinhala
-Conversational: Hindi, Urdu, French
-
-**Type:** Contact Frame
-**Design:** NOT full-viewport — 60-70vh, anchored to bottom. Compact grid layout. Name large, credentials as secondary text. Action hierarchy: CV download is most prominent, email second, LinkedIn/GitHub as tertiary. Languages and current work as small metadata blocks. Clean, functional, no gimmicks. Professional but not stiff.
-**Animation:** Gentle fade-in on scroll. No elaborate entrance — the information is the point, not the reveal.
+**Type:** Statement Frame (bookend to Frame 1) + Contact Footer
+**Design:** CTA section swings back to wide max-width (max-w-4xl), big serif headline, copper accent — bookends Frame 1. Three "If you..." conditions build with escalating text presence (secondary → primary/80 → primary). "Let's talk." in italic Crimson Pro copper — the final copper beat. Footer separated by border-t with generous margin (mt-24/mt-32). Two-column layout on desktop: left column has photo placeholder + name + credentials + action links (View CV border-button, email, LinkedIn, GitHub). Right column has 3-col metadata grid (Currently, Previously, Languages). Uses `!min-h-0` to override the standard full-viewport frame height.
+**Animation:** ScrollTrigger. Headline with Frame 1-level presence (blur 8px, y:32, 1s) → context → conditions stagger (0.15s) → "Let's talk." enters last with beat → footer info fades in gently (0.06s stagger).
 
 ---
 
 ## Overall Rhythm & Transitions
 
-**Emotional arc:**
+**Emotional arc (11 frames):**
 1. Opening intensity (Frame 1) — wide, copper, declarative
 2. Warming up, getting personal (Frame 2) — narrowing, intimate, story
 3. Building momentum (Frame 3) — accumulating evidence
@@ -208,11 +205,10 @@ Conversational: Hindi, Urdu, French
 8. Current passion (Frame 8) — alive, escalating, emotional peak
 9. Current rigor (Frame 9) — paired with 8, focused on one sharp distinction
 10. Honest quiet (Frame 10) — stripped, muted, the most space
-11. Confident invitation (Frame 11) — returns to Frame 1's scale, bookend
-12. Clean exit (Frame 12) — compact, functional, shorter than full viewport
+11. Confident invitation + clean exit (Frame 11) — returns to Frame 1's scale, bookend CTA then compact footer
 
 **Transition principles:**
 - Tone shifts are supported by layout changes (width, density, typography)
 - No visible dividers between frames except Frame 2's thin rule (marking abstract → personal)
 - Accent color (copper) appears only at key moments: Frame 1 headline, Frame 3 "Helped.", Frame 8 "I love it.", Frame 11 "Let's talk." — four beats across the whole site
-- Frame heights: most are 100dvh, Frame 12 is 60-70vh. Consider whether Frame 7 (staccato) could be slightly shorter if content doesn't fill the space naturally.
+- Frame heights: most are 100dvh, Frame 11 (Closing) uses `!min-h-0` for natural content height

@@ -4,8 +4,8 @@ import { gsap, useGSAP } from '@/lib/gsap'
 const roles = [
   { company: 'KPMG', work: 'M&A feasibility' },
   { company: 'PwC', work: 'Productivity analysis & AI research' },
-  { company: 'OCTAVE', work: 'Supply chain optimization' },
   { company: 'Acuity', work: 'Quantitative trading strategies' },
+  { company: 'OCTAVE', work: 'Supply chain optimization' },
   { company: 'NYUAD', work: '8TB of German Stock Exchange data' },
 ]
 
