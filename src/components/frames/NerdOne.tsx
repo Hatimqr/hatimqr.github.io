@@ -127,9 +127,7 @@ export function NerdOne() {
         >
           The backend is{' '}
           <span className="font-mono text-[0.9em] text-secondary">Python</span>
-          , so I can plug in any library I want. Next up: investment
-          analytics&mdash;portfolio tracking, return attribution, the works.
-          The end goal is a PS5 racing rig. The finance app is just
+          . The end goal is a PS5 racing rig. The finance app is just
           infrastructure.
         </p>
       </div>

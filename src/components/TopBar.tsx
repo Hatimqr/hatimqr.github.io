@@ -98,6 +98,7 @@ export function TopBar() {
           <span className="text-text-secondary">Econ</span>
           <span className="text-text-muted">)</span>
           <span className="text-secondary">@NYU</span>
+          <span className="hidden md:inline">
           <span className="text-text-muted"> + (</span>
           <span className="text-text-secondary">KPMG</span>
           <span className="text-text-muted"> + </span>
@@ -116,6 +117,7 @@ export function TopBar() {
           <span className="text-text-secondary">LLMs</span>
           <span className="text-text-muted">)</span>
           <span className="text-secondary">@Research</span>
+          </span>
           </span>
         </div>
 

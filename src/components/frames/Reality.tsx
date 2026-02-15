@@ -70,10 +70,6 @@ export function Reality() {
             out the next one.
           </p>
 
-          <p data-animate="paragraph" className="text-text-secondary">
-            And I care whether it helps. Not &ldquo;disruption&rdquo; for
-            LinkedIn posts. Not &ldquo;innovation&rdquo; for investor decks.
-          </p>
         </div>
 
         {/* The single moment of clarity */}

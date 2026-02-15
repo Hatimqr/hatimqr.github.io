@@ -71,7 +71,7 @@ GUIs get redesigned every few years. Sometimes for the worse (Windows 8). So whe
 --report: P&L and balance sheet generation
 --local: SQLite on my machine. No cloud.
 Overkill? Absolutely.
-The backend is Python, so I can plug in any library I want. Next up: investment analytics—portfolio tracking, return attribution, the works. The end goal is a PS5 racing rig. The finance app is just infrastructure."
+The backend is Python. The end goal is a PS5 racing rig. The finance app is just infrastructure."
 
 **Type:** Showcase Frame
 **Design:** Features rendered as CLI flags (--flag → description) inside a bordered, elevated card — structured like --help output. No green-on-black cliches. "Overkill? Absolutely." MUST have breathing room — it's a standalone beat, a shrug. Isolate it with generous margin (mt-12/mt-16). Let the silence around it do the work. Closing reveals the real motivation: PS5 racing rig.
@@ -104,14 +104,12 @@ Gap year, KPMG: Passed the first 9 ACCA exams in 7 months while working full-tim
 Didn't realize you could take study leave—just took the exam days off. Seemed fine at the time.
 I'll finish the last 4 eventually. I promise. My whole family's full of accountants—it would be weird not to.
 Route: Colombo → Abu Dhabi → Nairobi → Paris → New York → Buenos Aires (studied) + 23 other countries
-Languages: English, Sinhala (native) · Gujarati (speak) · Hindi/Urdu (understand) · French (5 months in Paris)
-Student Energy Summit 2023: 50+ countries · $500k raised · Abu Dhabi
 And I think philosophy is really cool too—especially Buddhism.
 But if I'm being honest, the rowing is still the thing I'm most proud of. Everything else I can attribute to caffeine."
 
 **Type:** Evidence Frame (staccato variant)
-**Design:** Rowing and ACCA as left-bordered evidence blocks with monospace labels. Bridge paragraph connects physical and technical discipline. Passport section uses monospace metadata layout (Route, Languages, Summit as labeled blocks). "Seemed fine at the time." rendered as a muted italic aside. Family line gets its own beat — echoes Frame 2's dad. Buddhism line as plain secondary text. Closing in italic Crimson Pro, secondary color — caffeine quip replaces the dinner party line.
-**Animation:** ScrollTrigger. Headline → rowing block → bridge → ACCA block → "seemed fine" aside (delay for comedic timing) → family line → passport block → metaphysics → rowing closer (final beat).
+**Design:** Rowing and ACCA as left-bordered evidence blocks with monospace labels. Bridge paragraph connects physical and technical discipline. Route as monospace metadata. "Seemed fine at the time." rendered as a muted italic aside. Family line gets its own beat — echoes Frame 2's dad. Buddhism line as plain secondary text. Closing in italic Crimson Pro, secondary color — caffeine quip.
+**Animation:** ScrollTrigger. Headline → rowing block → bridge → ACCA block → "seemed fine" aside (delay for comedic timing) → family line → route → metaphysics → rowing closer (final beat).
 
 ---
 
@@ -126,7 +124,7 @@ ILP — Solvers integrated directly into SQL
 PaQL — New query syntax for package semantics
 Approx — Because exact solutions outlast the heat death of the universe
 [PaQL code block with syntax highlighting]
-It's open source. It's my capstone. It hurts a little.
+It's [open source](https://huda-lab.github.io/packdb/index.html). It's my capstone. It hurts a little.
 I love it."
 
 **Type:** Showcase Frame (active project)
@@ -140,15 +138,15 @@ I love it."
 ## Frame 9: The Current Headache (Part 2) — BUILT
 
 **Content:**
-"Reasoning in Large Language Models.
-Independent research with Prof. Saurabh Ray investigating reinforcement learning approaches to improve LLM reasoning capabilities.
-Started with RLHF fundamentals. Now exploring whether these techniques could help with formal theorem proving in Lean.
-The goal isn't making models sound smart. It's making them actually be right.
-There's a difference. A big one."
+"I created the hardest class I've taken at university.
+A friend and I went to one of our professors and asked to do a directed study on reasoning in LLMs. We proposed the syllabus. We take turns every week presenting the topics to each other, supervised by a professor. We cover:
+Transformer architecture · Mechanistic interpretability · DQNs · Policy gradients · RLHF · DPO · Chain of thought · Tree of thought · DeepSeek R1 · PAL · Lean
+And honestly? An AI tool helped me build this website. It's the single most useful thing I've ever worked with. It surprises me. It teaches me. I want to know how on earth it does what it does.
+If I'm going to use it every day, I should probably understand it."
 
 **Type:** Showcase Frame (active project)
-**Design:** Visually paired with Frame 8 — same layout structure, same "current" indicator. But the energy challenge is real: this follows Frame 8's emotional peak ("I love it."). The design solution: make the "sound smart vs. actually be right" distinction the SOLE visual focus. Everything else is setup. "There's a difference. A big one." should land as hard as "Helped." did in Frame 3 — isolated, emphasized, given room. Consider: "actually be right" in accent or italic serif to create the contrast with "sound smart" visually, not just textually.
-**Animation:** ScrollTrigger. Matches Frame 8's rhythm. Project label/headline → research context → the distinction line enters with weight → "A big one." lands last.
+**Design:** Visually paired with Frame 8 — same "Current work" label, same max-w-2xl. Different energy: intellectual hunger, not passion. Description flows into curriculum card (bordered bg-elevated container, all topics as middot-separated monospace text). The "And honestly?" paragraph is the punch — larger text (text-lg/text-xl), "how on earth it does what it does" in italic Crimson Pro primary white. Landing in italic serif — the "probably" does the tonal work.
+**Animation:** ScrollTrigger. Label → headline → description → curriculum card → punch (+=0.2 delay, needs room) → landing (+=0.15 delay).
 
 ---
 
@@ -158,37 +156,31 @@ There's a difference. A big one."
 "Look, I'm not going to pretend I have it all figured out.
 I'm still learning. Still making mistakes. Still spending too much time debugging things that shouldn't be broken.
 But I've built enough things that work to know I can figure out the next one.
-And I care whether it helps. Not 'disruption' for LinkedIn posts. Not 'innovation' for investor decks.
-Just: does this solve a real problem? Does it make someone's work better?
-If the answer is no, I probably shouldn't be working on it."
+Just: does this solve a real problem? Does it make someone's work better?"
 
 **Type:** Narrative Frame (stripped)
-**Design:** The quietest frame visually. Narrowest max-width, plainest typography, most negative space. After all the proof and escalation, the visual reduction mirrors the honesty. NO accent colors. NO serif flourishes. Just DM Sans in secondary gray throughout. One exception: "does this solve a real problem? Does it make someone's work better?" in primary white — the single moment of clarity in a deliberately muted frame. Everything else recedes.
-**Animation:** ScrollTrigger. Gentle, understated. Simpler focus-pull (less blur, less travel). The restraint in animation matches the restraint in design.
+**Design:** The quietest frame visually. Narrowest max-width (max-w-lg), plainest typography, most negative space. After all the proof and escalation, the visual reduction mirrors the honesty. NO accent colors. NO serif flourishes. Just DM Sans in secondary gray throughout. One exception: "does this solve a real problem? Does it make someone's work better?" in primary white — the single moment of clarity in a deliberately muted frame. Everything else recedes.
+**Animation:** ScrollTrigger at top 70%. Headline (y:20, blur 4px, 0.9s) → paragraphs (y:14, blur 3px, 0.8s, stagger 0.15s) → clarity line (y:12, blur 3px, 0.9s). Gentle, understated. Less blur, less travel than other frames. The restraint in animation matches the restraint in design.
 
 ---
 
 ## Frame 11: The Closing (CTA + Footer) — BUILT
 
 **Content (CTA):**
-"I want your hardest problems.
-I'm graduating May 2026.
-If you have a complex dataset, a messy pipeline, or a problem that scares your current team—
-If you need someone who can move between business context and technical implementation without getting lost in either—
-If you're working on something where the solution isn't obvious and the stakes actually matter—
-Let's talk."
+"That's the story so far.
+I graduate in May 2026. I'm looking for the next problem that'll keep me up at night."
 
 **Content (Footer):**
 Hatim Rehmanjee (with photo placeholder)
 CS @ NYU Abu Dhabi | 3.95 GPA | 100% Scholarship
 [View CV] · [hrehmanjee@icloud.com] · [LinkedIn] · [GitHub]
-Currently: Building PackDB and researching LLM reasoning.
+Currently: Building PackDB and studying LLM reasoning.
 Previously: OCTAVE, Acuity, KPMG, PwC.
 Languages: English, Gujarati, Sinhala · Hindi, Urdu, French
 
-**Type:** Statement Frame (bookend to Frame 1) + Contact Footer
-**Design:** CTA section swings back to wide max-width (max-w-4xl), big serif headline, copper accent — bookends Frame 1. Three "If you..." conditions build with escalating text presence (secondary → primary/80 → primary). "Let's talk." in italic Crimson Pro copper — the final copper beat. Footer separated by border-t with generous margin (mt-24/mt-32). Two-column layout on desktop: left column has photo placeholder + name + credentials + action links (View CV border-button, email, LinkedIn, GitHub). Right column has 3-col metadata grid (Currently, Previously, Languages). Uses `!min-h-0` to override the standard full-viewport frame height.
-**Animation:** ScrollTrigger. Headline with Frame 1-level presence (blur 8px, y:32, 1s) → context → conditions stagger (0.15s) → "Let's talk." enters last with beat → footer info fades in gently (0.06s stagger).
+**Type:** Narrative close (bookend to Frame 1) + Contact Footer
+**Design:** "That's the story so far." in italic Crimson Pro, copper accent — the fourth and final copper beat, bookending Frame 1. Smaller than Frame 1's headline (clamp 1.75rem–2.75rem vs 2.5rem–4.5rem) — it's a quiet conclusion, not a declaration. Context line in secondary text beneath. The selling is indirect: the story itself is the pitch; this frame just signs off. Footer separated by border-t with generous margin (mt-16/mt-20). Two-column layout on desktop: left column has photo placeholder + name + credentials + action links (View CV border-button, email, LinkedIn, GitHub). Right column has 3-col metadata grid (Currently, Previously, Languages). Full viewport height (100dvh) — no `!min-h-0` override, prevents previous frame text from bleeding through.
+**Animation:** ScrollTrigger at top 70%. Headline (y:20, blur 4px, 0.9s) → context (y:14, blur 3px, 0.7s) → footer items stagger in gently (y:10, blur 2px, 0.5s, stagger 0.06s). Dialed down to match Reality frame's restraint — no dramatic focus-pull.
 
 ---
 
@@ -203,12 +195,12 @@ Languages: English, Gujarati, Sinhala · Hindi, Urdu, French
 6. Self-aware absurdity (Frame 6) — technical texture, whispered punchline
 7. Human precision (Frame 7) — staccato facts, same voice different data
 8. Current passion (Frame 8) — alive, escalating, emotional peak
-9. Current rigor (Frame 9) — paired with 8, focused on one sharp distinction
+9. Intellectual hunger (Frame 9) — paired with 8, curiosity-driven, meta-punchline about AI building the site
 10. Honest quiet (Frame 10) — stripped, muted, the most space
-11. Confident invitation + clean exit (Frame 11) — returns to Frame 1's scale, bookend CTA then compact footer
+11. Quiet sign-off + clean exit (Frame 11) — copper bookend to Frame 1, story closes itself, footer handles the details
 
 **Transition principles:**
 - Tone shifts are supported by layout changes (width, density, typography)
 - No visible dividers between frames except Frame 2's thin rule (marking abstract → personal)
-- Accent color (copper) appears only at key moments: Frame 1 headline, Frame 3 "Helped.", Frame 8 "I love it.", Frame 11 "Let's talk." — four beats across the whole site
-- Frame heights: most are 100dvh, Frame 11 (Closing) uses `!min-h-0` for natural content height
+- Accent color (copper) appears only at key moments: Frame 1 headline, Frame 3 "Helped.", Frame 8 "I love it.", Frame 11 "That's the story so far." — four beats across the whole site
+- Frame heights: all 100dvh

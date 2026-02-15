@@ -107,7 +107,7 @@ export function PackDB() {
           data-animate="headline"
           className="mt-4 font-display text-[clamp(1.75rem,4.5vw,3rem)] leading-[1.12] tracking-[-0.02em]"
         >
-          PackDB: Making databases solve impossible problems.
+          PackDB: Making databases solve weird problems.
         </h2>
 
         <div className="mt-8 space-y-5 md:mt-10">
@@ -225,7 +225,16 @@ export function PackDB() {
           data-animate="hurts"
           className="mt-10 text-text-secondary md:mt-12"
         >
-          It&rsquo;s open source. It&rsquo;s my capstone. It hurts a little.
+          It&rsquo;s{' '}
+          <a
+            href="https://huda-lab.github.io/packdb/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-text-primary/70 underline decoration-text-muted/60 underline-offset-2 transition-colors duration-300 hover:text-accent-hover hover:decoration-accent/40"
+          >
+            open source
+          </a>
+          . It&rsquo;s my capstone. It hurts a little.
         </p>
 
         <p

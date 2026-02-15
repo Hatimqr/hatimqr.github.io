@@ -191,33 +191,6 @@ export function Human() {
             </p>
           </div>
 
-          <div>
-            <p className="font-mono text-xs tracking-[0.1em] uppercase text-text-muted">
-              Languages
-            </p>
-            <p className="mt-1.5 font-mono text-sm text-text-secondary">
-              English, Sinhala{' '}
-              <span className="text-text-muted">(native)</span>{' '}
-              &middot; Gujarati{' '}
-              <span className="text-text-muted">(speak)</span>{' '}
-              &middot; Hindi/Urdu{' '}
-              <span className="text-text-muted">(understand)</span>{' '}
-              &middot; French{' '}
-              <span className="text-text-muted">(5 months in Paris)</span>
-            </p>
-          </div>
-
-          <div>
-            <p className="font-mono text-xs tracking-[0.1em] uppercase text-text-muted">
-              Student Energy Summit 2023
-            </p>
-            <p className="mt-1.5 font-mono text-sm text-text-secondary">
-              50+ countries &middot; $500k raised &middot; Abu Dhabi
-            </p>
-            <p className="mt-0.5 font-mono text-sm text-text-muted">
-              Largest student-led energy conference in the world
-            </p>
-          </div>
         </div>
 
         <p

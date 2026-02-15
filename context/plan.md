@@ -72,7 +72,7 @@ GUIs get redesigned every few years. Sometimes for the worse (Windows 8). So whe
 
 Overkill? Absolutely.
 
-The backend is Python, so I can plug in any library I want. Next up: investment analytics—portfolio tracking, return attribution, the works. The end goal is a PS5 racing rig. The finance app is just infrastructure.
+The backend is Python. The end goal is a PS5 racing rig. The finance app is just infrastructure.
 
 ---
 
@@ -103,8 +103,6 @@ Gap year, KPMG: Passed the first 9 ACCA exams in 7 months while working full-tim
 I'll finish the last 4 eventually. I promise. My whole family's full of accountants—it would be weird not to.
 
 Route: Colombo → Abu Dhabi → Nairobi → Paris → New York → Buenos Aires (studied) + 23 other countries (yeah, I like to travel)
-Languages: English, Sinhala (native) · Gujarati (speak) · Hindi/Urdu (understand) · French (5 months in Paris)
-Student Energy Summit 2023: 50+ countries · $500k raised · Abu Dhabi — Largest student-led energy conference in the world
 
 And I think philosophy is really cool too—especially Buddhism.
 
@@ -124,7 +122,7 @@ ILP — Solvers integrated directly into SQL
 PaQL — New query syntax for package semantics
 Approx — Because exact solutions outlast the heat death of the universe
 
-It's open source. It's my capstone. It hurts a little.
+It's [open source](https://huda-lab.github.io/packdb/index.html). It's my capstone. It hurts a little.
 
 I love it.
 
@@ -132,15 +130,15 @@ I love it.
 
 ## Frame 9: The Current Headache (Part 2)
 
-**Reasoning in Large Language Models.**
+**I created the hardest class I've taken at university.**
 
-Independent research with Prof. Saurabh Ray investigating reinforcement learning approaches to improve LLM reasoning capabilities.
+A friend and I went to one of our professors and asked to do a directed study on reasoning in LLMs. We proposed the syllabus. We take turns every week presenting the topics to each other, supervised by a professor. We cover:
 
-Started with RLHF fundamentals. Now exploring whether these techniques could help with formal theorem proving in Lean.
+Transformer architecture · Mechanistic interpretability · DQNs · Policy gradients · RLHF · DPO · Chain of thought · Tree of thought · DeepSeek R1 · PAL · Lean
 
-The goal isn't making models *sound* smart. It's making them *actually be* right.
+And honestly? An AI tool helped me build this website. It's the single most useful thing I've ever worked with. It surprises me. It teaches me. I want to know *how on earth it does what it does*.
 
-There's a difference. A big one.
+If I'm going to use it every day, I should probably understand it.
 
 ---
 
@@ -152,27 +150,15 @@ I'm still learning. Still making mistakes. Still spending too much time debuggin
 
 But I've built enough things that work to know I can figure out the next one.
 
-And I care whether it helps. Not "disruption" for LinkedIn posts. Not "innovation" for investor decks.
-
 Just: does this solve a real problem? Does it make someone's work better?
-
-If the answer is no, I probably shouldn't be working on it.
 
 ---
 
 ## Frame 11: The Closing (CTA + Footer)
 
-**I want your hardest problems.**
+*That's the story so far.*
 
-I'm graduating May 2026.
-
-If you have a complex dataset, a messy pipeline, or a problem that scares your current team—
-
-If you need someone who can move between business context and technical implementation without getting lost in either—
-
-If you're working on something where the solution isn't obvious and the stakes actually matter—
-
-**Let's talk.**
+I graduate in May 2026. I'm looking for the next problem that'll keep me up at night.
 
 --- Footer ---
 
@@ -182,7 +168,7 @@ CS @ NYU Abu Dhabi | 3.95 GPA | 100% Scholarship
 
 **[View CV]** · **[hrehmanjee@icloud.com]** · **[LinkedIn]** · **[GitHub]**
 
-Currently: Building PackDB and researching LLM reasoning.
+Currently: Building PackDB and studying LLM reasoning.
 Previously: OCTAVE, Acuity, KPMG, PwC.
 Languages: English, Gujarati, Sinhala · Hindi, Urdu, French
 
