@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+@theme {
+  --font-display: "Crimson Pro", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Backgrounds — ink / blue-black */
+  --color-bg: #0b0d11;
+  --color-bg-elevated: #111318;
+  --color-surface: #181b22;
+  --color-border: #252830;
+
+  /* Text — warm whites, cool grays */
+  --color-text-primary: #e4e2df;
+  --color-text-secondary: #7d818c;
+  --color-text-muted: #44474f;
+
+  /* Accent — Burnished Copper */
+  --color-accent: #c2865a;
+  --color-accent-hover: #d4975e;
+  --color-accent-subtle: #1e1714;
+
+  /* Secondary — Muted Steel */
+  --color-secondary: #5e7f9e;
+  --color-secondary-subtle: #121820;
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ── Base ── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* Thin scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+}
+
+/* ── Scroll Frame ── */
+@layer components {
+  .frame {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .frame {
+      padding: 4rem 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .frame {
+      padding: 6rem 4rem;
+    }
+  }
+}
+
+/* ── Grain Overlay ── */
+@layer utilities {
+  .grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+}
