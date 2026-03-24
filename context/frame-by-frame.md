@@ -83,14 +83,14 @@ The backend is Python. The end goal is a PS5 racing rig. The finance app is just
 
 **Content:**
 "I also over-analyze my hobbies.
-Scraped 1,000+ F1 car setups and lap times across 24 tracks. Applied PCA and K-Means clustering to identify 'setup philosophies.'
-Built Random Forest models to quantify setup parameter sensitivity. Calculated exact lap time deltas per adjustment.
-Because why just watch the race when you can prove whether front wing angle actually matters as much as the commentators claim it does?
-(It does, but only at specific tracks. See? Told you.)"
+Remember the PS5 racing rig? It needed instrumentation. So I built a real-time telemetry dashboard that parses live UDP data from the console at 20Hz.
+Speed, throttle, brake, steering—all plotted in a sliding ±300m window, overlaid against my best lap. A live delta trace shows exactly where I'm gaining or losing time. It flags lock-ups and oversteer by reading wheel slip data in real time.
+Because why just play a video game when you can build race engineering infrastructure for it?
+(Top 8% globally at Spa and Suzuka. The dashboard helped.)"
 
 **Type:** Showcase Frame
-**Design:** NO racing imagery or abstracted F1 visuals — that would look like clip art on a site this refined. The technical terms ARE the texture: PCA, K-Means, Random Forest, lap time deltas. They're already impressive; let them sit in the prose. The parenthetical "(It does, but only at specific tracks. See? Told you.)" is the best line on the site — give it its own visual space. Render it as an aside: slightly indented, italic, maybe in a slightly smaller size or with a different text color. It should feel like a whispered addendum, the kind of thing said while walking away.
-**Animation:** ScrollTrigger. Headline → technical paragraphs stagger → rhetorical question → parenthetical aside fades in last with extra delay (the punchline needs room).
+**Design:** Callbacks to Frame 5's PS5 racing rig line. Technical terms woven into prose as texture: UDP, 20Hz, ±300m, delta, wheel slip. The parenthetical aside is the punchline — understated, whispered, said while walking away. Visualization is a JSX/SVG telemetry trace mockup (not a screenshot) using the site's own color palette: two speed traces (current lap in primary white, reference in dim steel) inside a PackDB-style faux-editor card with a copper delta readout.
+**Animation:** ScrollTrigger. Headline → technical paragraphs stagger → rhetorical question → parenthetical aside fades in last with extra delay (the punchline needs room) → telemetry card.
 
 ---
 

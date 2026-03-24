@@ -1,13 +1,6 @@
 import { useRef } from 'react'
 import { gsap, useGSAP } from '@/lib/gsap'
 
-const features = [
-  { flag: '--ledger', desc: 'Double-entry bookkeeping' },
-  { flag: '--reconcile', desc: 'Automated reconciliation' },
-  { flag: '--report', desc: 'P&L and balance sheet generation' },
-  { flag: '--local', desc: 'SQLite on my machine. No cloud.' },
-]
-
 export function NerdOne() {
   const containerRef = useRef<HTMLElement>(null)
 
@@ -42,11 +35,10 @@ export function NerdOne() {
       tl.from(
         '[data-animate="feature"]',
         {
-          y: 12,
+          y: 16,
           opacity: 0,
-          filter: 'blur(3px)',
-          duration: 0.5,
-          stagger: 0.08,
+          filter: 'blur(4px)',
+          duration: 0.7,
         },
         '-=0.2',
       )
@@ -93,24 +85,18 @@ export function NerdOne() {
           personal finance tool, I built a terminal application in Python.
         </p>
 
-        {/* Feature list — tight, structured, CLI-flavored */}
-        <div className="mt-8 rounded-lg border border-border bg-bg-elevated p-5 md:mt-10 md:p-6">
-          <div className="grid gap-2.5">
-            {features.map((f) => (
-              <div
-                key={f.flag}
-                data-animate="feature"
-                className="flex items-baseline gap-3"
-              >
-                <span className="shrink-0 font-mono text-sm text-secondary">
-                  {f.flag}
-                </span>
-                <span className="text-text-secondary">
-                  {f.desc}
-                </span>
-              </div>
-            ))}
-          </div>
+        <div
+          data-animate="feature"
+          className="mx-auto mt-8 max-w-md overflow-hidden rounded-lg border border-border md:mt-10"
+        >
+          <img
+            src="/finance.png"
+            alt="Personal finance dashboard — double-entry bookkeeping, reconciliation, P&L reports"
+            className="w-full"
+          />
+          <p className="py-2 text-center font-mono text-xs italic text-text-muted">
+            (yes, this actually is a terminal — and no, these are definitely not my actual finances)
+          </p>
         </div>
 
         {/* The shrug */}

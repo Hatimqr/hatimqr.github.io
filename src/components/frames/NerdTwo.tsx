@@ -33,17 +33,6 @@ export function NerdTwo() {
         '-=0.35',
       )
 
-      tl.from(
-        '[data-animate="question"]',
-        {
-          y: 16,
-          opacity: 0,
-          filter: 'blur(4px)',
-          duration: 0.7,
-        },
-        '-=0.15',
-      )
-
       // The aside — extra delay, the mic-drop needs room
       tl.from(
         '[data-animate="aside"]',
@@ -82,55 +71,48 @@ export function NerdTwo() {
 
         <div className="mt-8 space-y-5 md:mt-10">
           <p data-animate="paragraph" className="text-text-secondary">
-            Scraped 1,000+ F1 car setups and lap times across 24 tracks.
-            Applied{' '}
-            <span className="font-mono text-[0.9em] text-secondary">PCA</span>{' '}
-            and{' '}
-            <span className="font-mono text-[0.9em] text-secondary">
-              K-Means
-            </span>{' '}
-            clustering to identify &ldquo;setup philosophies.&rdquo;
+            Remember the PS5 racing rig? I needed to get faster. So I built a
+            real-time telemetry dashboard that parses live{' '}
+            <span className="font-mono text-[0.9em] text-secondary">UDP</span>{' '}
+            data from the console at{' '}
+            <span className="font-mono text-[0.9em] text-secondary">20Hz</span>
+            .
           </p>
 
           <p data-animate="paragraph" className="text-text-secondary">
-            Built{' '}
+            Speed, throttle, brake, steering&mdash;all plotted in a sliding{' '}
             <span className="font-mono text-[0.9em] text-secondary">
-              Random Forest
+              &plusmn;300m
             </span>{' '}
-            models to quantify setup parameter sensitivity. Calculated exact lap
-            time deltas per adjustment.
+            window, overlaid against my best lap. A live{' '}
+            <span className="font-mono text-[0.9em] text-secondary">
+              delta
+            </span>{' '}
+            trace shows exactly where I&rsquo;m gaining or losing time. It flags
+            lock-ups and oversteer by reading{' '}
+            <span className="font-mono text-[0.9em] text-secondary">
+              wheel slip
+            </span>{' '}
+            data in real time.
           </p>
         </div>
 
-        <p
-          data-animate="question"
-          className="mt-8 text-text-secondary md:mt-10"
-        >
-          Because why just <em>watch</em> the race when you can prove whether
-          front wing angle actually matters as much as the commentators claim it
-          does?
-        </p>
-
-        {/* Showcase: aside + visualization as cohesive unit */}
+        {/* Showcase: aside + telemetry visualization */}
         <div className="mt-10 md:mt-12">
-          <p
-            data-animate="aside"
-            className="pl-5 font-display text-lg italic text-text-muted md:text-xl"
-          >
-            (It does, but only at specific tracks—like Spain:)
-          </p>
-
           <div
             data-animate="viz"
-            className="mt-6 rounded-lg border border-border bg-surface p-4 md:p-5"
+            className="mx-auto max-w-md overflow-hidden rounded-lg border border-border"
           >
             <img
-              src="/visualization.png"
-              alt="Spain setup clusters - PCA visualization showing F1 car setup philosophies"
-              className="w-full rounded"
+              src="/telemetry.png"
+              alt="Real-time F1 telemetry dashboard showing speed, delta, throttle, brake, and steering traces"
+              className="w-full"
             />
-            <p className="mt-3 text-center font-mono text-xs tracking-wide uppercase text-text-muted">
-              Setup Philosophy Clusters — Spain Circuit
+            <p
+              data-animate="aside"
+              className="py-2 text-center font-mono text-xs italic text-text-muted"
+            >
+              (top 8% globally at Spa and Suzuka — the dashboard helped)
             </p>
           </div>
         </div>
